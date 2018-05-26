@@ -3,7 +3,7 @@ _taskIsrunning = missionNamespace getVariable ["running_task",1];
 
 if(_taskIsrunning == 0) then {
 
-_tasks = ["Eliminate","Technology","Destroy","Annihilate and Destroy","Secure","Capture","Exterminate","Neutralize","Retrieve","Attack","Clear out","Neutralize2","Destroy Choppers","IDAP","Minefield"];
+_tasks = ["Retrieve","Eliminate","Technology","Destroy","Annihilate and Destroy","Secure","Capture","Exterminate","Neutralize","Attack","Clear out","Neutralize2","IDAP","Minefield"];
 
 _tasks call BIS_fnc_arrayShuffle;
 _markerarray = ["Mark1","Mark1_2","Mark1_3","Mark1_4","Mark1_5","Mark1_6","Mark1_7","Mark1_8","Mark1_9","Mark1_10","Mark1_11","Mark1_12","Mark1_13","Mark1_14","Mark1_15","Mark1_16","Mark1_17","Mark1_18","Mark1_19","Mark1_20"];
@@ -835,7 +835,7 @@ switch (_taskobjective) do
 		_guardgroup = createGroup civilian;
 		_guard = _guardgroup createUnit ["rhs_g_Soldier_TL_F", getMarkerPos _citymarker, [], 2, "NONE"];
 		_guardpos = getpos _guard;
-		_taskItems = [_guard] call JeyR_fnc_retrieve;
+		_taskItems = [_guard] call CHAB_fnc_retrieve;
 		[_guard,5,0,0] execVM "functions\spawn_ins.sqf";
 		
 		sleep 20;
@@ -850,9 +850,10 @@ switch (_taskobjective) do
 		};
 
 		[_current_tasknumber, "SUCCEEDED",true] spawn BIS_fnc_taskSetState;
-		[_guardpos] call jey_endmission;
+		[_guardpos] call CHAB_fnc_endmission;
 		deleteVehicle _crate;
 		missionNamespace setVariable ["running_task",0];
+		missionNamespace setVariable ["TaskObjective","none"];
 	};
 	case "Attack" : 
 	{	
