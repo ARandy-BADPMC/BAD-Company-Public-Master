@@ -35,3 +35,20 @@ RHSDecalsOff = true;
 	Receiving_finish = true;
 	WaitUntil{!isNil "mps_init"};
 };
+
+0 = [] spawn { 
+    while{true} do { 
+        { 
+            if(_x distance (getMarkerPos "red") < 100) then {_x allowDamage false} else {_x allowDamage true}; 
+        } forEach allUnits + vehicles; 
+        sleep 1; 
+    }; 
+};
+0 = [] spawn { 
+    while{true} do { 
+        { 
+            if(_x distance (getMarkerPos "base_marker") < 100) then {_x allowDamage false} else {_x allowDamage true}; 
+        } forEach allUnits + vehicles; 
+        sleep 1; 
+    }; 
+};
