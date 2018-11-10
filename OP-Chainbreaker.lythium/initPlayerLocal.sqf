@@ -150,4 +150,4 @@ jey_call_flares =
 		//["Submenu", [5], "#USER:MENU_COMMS_2", -5, [], "1", "1"]
 	];*/
 	
-[] execVM "EPD\Ied_Init.sqf";
+//[] execVM "EPD\Ied_Init.sqf";

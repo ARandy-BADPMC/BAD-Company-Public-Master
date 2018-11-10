@@ -3,7 +3,7 @@ _taskIsrunning = missionNamespace getVariable ["running_task",1];
 
 if(_taskIsrunning == 0) then {
 
-_tasks = ["Eliminate","Technology","Destroy","Annihilate and Destroy","Secure","Capture","Exterminate","Neutralize","Neutralize2","Retrieve","Clear out","IDAP"];
+_tasks = ["Eliminate","Technology","Destroy","Annihilate and Destroy","Secure","Capture","Exterminate","Neutralize","Neutralize2","Attack","Retrieve","Clear out","IDAP"];
 
 _tasks call BIS_fnc_arrayShuffle;
 _markerarray = ["Mark1","Mark1_2","Mark1_3","Mark1_4","Mark1_5","Mark1_6","Mark1_7","Mark1_8","Mark1_9","Mark1_10","Mark1_11","Mark1_12","Mark1_13","Mark1_14","Mark1_15","Mark1_16","Mark1_17","Mark1_18","Mark1_19","Mark1_20"];
@@ -22,7 +22,52 @@ missionNamespace setVariable ["TaskObjective",_taskobjective];
 switch (_taskobjective) do 
 { 
 
+	case "Prison" :
+	{
+		_taskcomp = "prison";
+		missionNamespace setVariable ["running_task",1];
+		[_current_tasknumber ,west,["A high ranking officer has arrived at an Insurgent camp near the marked area. You have to Capture him","Prisonbreak",_current_task],getMarkerPos _current_task,"ASSIGNED",10,true,true,"search",true] call BIS_fnc_setTask;
+		_capturegroup = createGroup east;
 
+		waitUntil {
+		  _base = [getMarkerPos _current_task, 400, 2000, 20, 0, 0.5, 0, ["base_marker"], [getMarkerPos _current_task,getMarkerPos _current_task]] call BIS_fnc_findSafePos;
+
+		  !(_base isEqualTo [0,0,0])
+		};
+		_target1 = _capturegroup createUnit ["rhs_g_Soldier_TL_F", _base, [], 2, "NONE"];
+
+		_guardpos = getPos _target1;
+		_comp = [_taskcomp,_guardpos, [0,0,0], random 360, true, true ] call LARs_fnc_spawnComp;
+
+		[_target1,10,1,2] execVM "functions\spawn_ins.sqf";
+		
+		removeAllWeapons _target1;
+		_target1 disableAI "AUTOCOMBAT";
+		_target1 setunitpos "middle";
+		[_target1] spawn CHAB_fnc_roadblock_ins;
+		waitUntil 
+		{
+			sleep 10;
+			_target1 distance (getPos dropoffpoint) < 10 || !alive _target1
+		};
+
+		if(alive _target1) then 
+		{
+			[_current_tasknumber, "SUCCEEDED",true] spawn BIS_fnc_taskSetState;
+			[_guardpos] call CHAB_fnc_endmission;
+			[ _comp ] call LARs_fnc_deleteComp;
+			missionNamespace setVariable ["running_task",0];
+			missionNamespace setVariable ["TaskObjective","none"];
+		}
+		else
+		{
+			[_current_tasknumber, "FAILED",true] spawn BIS_fnc_taskSetState;
+			[_guardpos] call CHAB_fnc_endmission;
+			[ _comp ] call LARs_fnc_deleteComp;
+			missionNamespace setVariable ["running_task",0];
+			missionNamespace setVariable ["TaskObjective","none"];
+		};
+	};
 	case "Neutralize2" :
 	{
 		missionNamespace setVariable ["running_task",1];

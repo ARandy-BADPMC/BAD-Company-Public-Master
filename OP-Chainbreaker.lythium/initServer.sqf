@@ -101,4 +101,4 @@ flares_server =
 	artilerry2 commandArtilleryFire [_markpos,getArtilleryAmmo [artilerry2] select 1,1];
 };*/
 
-[] execVM "EPD\Ied_Init.sqf";
+//[] execVM "EPD\Ied_Init.sqf";
