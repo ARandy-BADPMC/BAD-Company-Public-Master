@@ -1,104 +1,52 @@
-["Initialize"] call BIS_fnc_dynamicGroups; // Initializes the Dynamic Groups framework	
-call compile preprocessfilelinenumbers "functions\heliskinapply.sqf";
-call compile preprocessFileLineNumbers "functions\retrieve.sqf";
+["Initialize"] call BIS_fnc_dynamicGroups;
+call compileFinal preprocessfilelinenumbers "functions\heliskinapply.sqf";
 missionNamespace setVariable ["running_task",0];
 missionNamespace setVariable ["zeus_enabled",0];
-missionNamespace setVariable ["current_task","asd"];
-missionNamespace setVariable ["TaskObjective","none"];
-missionNamespace setVariable ["uavTarget",jeff];
+missionNamespace setVariable ["task_spot",[5840,5700,0]];
 
-uav_drone lockDriver true; 
-uav_drone enableUAVWaypoints false;
 
-uav_drone addEventHandler["Fuel",
 {
-	_vehicle = _this select 0;
-	_fuel = _this select 1;
-	if (!_fuel) then {
-		[_vehicle,1] remoteExecCall ["setFuel",_vehicle,false];
-		[_vehicle,true] remoteExecCall ["engineOn",_vehicle,false];
-		//_vehicle engineOn true;
-	};
-}];
+ 	_x allowDamage false;
+	[_x, "LISTEN_BRIEFING", "Light"] call BIS_fnc_ambientAnim;
+} forEach [officer_jeff,tank_spawner,heli_jeff]; 
 
-//uav_drone lockCameraTo [jeff, [0]];
-uav_drone flyInHeight 2500;
+/*
+/\
+||
 
-_wp = group uav_drone addWaypoint [position jeff, 0];
-_wp setWaypointType "LOITER";
-_wp setWaypointLoiterType "CIRCLE_L";
-_wp setWaypointLoiterRadius 2500;
+Result:
+0.116768 ms
 
-[] spawn {
-	while {true} do {
-		_istask = missionNamespace getVariable ["running_task",0];
-		if (_istask == 1) then 
-		{
-			_objective = missionNamespace getVariable ["TaskObjective","none"];
-			if (_objective isEqualTo "none") then {
-				sleep 60;
-			}
-			else
-			{
-				if (_objective isEqualTo "IDAP" || _objective isEqualTo "Retrieve" || _objective isEqualTo "Attack" || _objective isEqualTo "Minefield" || _objective isEqualTo "Clear out") then 
-				{
-					_marker = missionNamespace getVariable ["citymarker",jeff];
-					[_marker] call CHAB_fnc_sendDrone;
-				}
-				else
-				{
-					_marker = missionNamespace getVariable ["current_task",jeff];
-					[_marker] call CHAB_fnc_sendDrone;
-				};
-			};
-			waitUntil {
-			  sleep 1;
-			
-			  (missionNamespace getVariable ["running_task",0]) == 0
-			};
-		}
-		else
-		{
-			sleep 60;
-		};
-	};
-};
+Cycles:
+8564/10000
 
-["player_camera_delete", "onPlayerDisconnected", {
+old results:
 
-[_uid] remoteExecCall ["CHAB_fnc_delete_cam",-2,false];
+Result:
+0.242012 ms
 
-}] call BIS_fnc_addStackedEventHandler;
+Cycles:
+9651/10000
+*/ //if you want to check execution time : BIS_fnc_codePerformance; 
 
-officer_jeff allowDamage false;
-[officer_jeff, "LISTEN_BRIEFING", "NONE"] call BIS_fnc_ambientAnim;
 
-[tank_spawner, "LISTEN_BRIEFING", "NONE"] call BIS_fnc_ambientAnim;
-tank_spawner allowDamage false;
+//[7427,7955,0] [7480,13351,0] [1403.27,7529.75,0]
+/*
 
-heli_jeff allowDamage false;
-[heli_jeff, "LISTEN_BRIEFING", "Light"] call BIS_fnc_ambientAnim; 
+11680
+[5840,5700,0];
+11400
 
+*/
+missionNamespace setVariable ["World_center",[5840,5700,0]];
 _citymarker = createMarker ["citymarker",  getpos officer_jeff];
 missionNamespace setVariable ["citymarker",_citymarker];
 
-fnc_cleanup = compileFinal preprocessFileLineNumbers "cleanup.sqf";
-
-[] spawn {
-
-	while {true} do {        
-
-		[] call fnc_cleanup;
-
-	sleep 1200;
-	};
-};
+_nearbyLocations = nearestLocations [[5840,5700,0], ["NameCity","NameCityCapital","NameVillage"], 8000];
 /*
-flares_server =
 {
-	_markpos = [getPos (_this select 0), random 150, random 359] call BIS_fnc_relPos;
-	artilerry1 commandArtilleryFire [_markpos,getArtilleryAmmo [artilerry1] select 1,1];
-	artilerry2 commandArtilleryFire [_markpos,getArtilleryAmmo [artilerry2] select 1,1];
-};*/
+	_marker1 = createMarker ["Marker"+ str _x, getPos _x];
+	_marker1 setMarkerType "hd_objective";
+} forEach _nearbyLocations;*/
 
-//[] execVM "EPD\Ied_Init.sqf";
+missionNamespace setVariable ["Cities",_nearbyLocations];
