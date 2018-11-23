@@ -9,7 +9,7 @@ _mechanized = selectRandom ["rhs_group_nat_btr70_squad_2mg","rhs_group_nat_btr70
 _cfgMechanized =  configFile >> "CfgGroups" >> "Indep" >> "rhs_faction_nationalist" >> _mechanized;
 _MechArray = [];
 private ["_suitable"];
-_suitable = [0,0,0];
+_suitable = [4484.67,12079,24.1537];
 for "_j" from 0 to (count _cfgMechanized)-1 do {
 	_currentGroup = _cfgMechanized select _j;
 	_MechArray pushback _currentGroup;
@@ -17,7 +17,7 @@ for "_j" from 0 to (count _cfgMechanized)-1 do {
 _MechArray deleteat 0;
 if (_mechToSpawn != 0) then {
 	for "_i" from 1 to _mechToSpawn do { 
-		_spawnPos = [0,0,0];
+		_spawnPos = [4484.67,12079,24.1537];
 		while {surfaceIsWater _spawnPos || (_suitable select 0)<=100 || (_suitable select 1) >= 13000 } do {
 			_spawnPos = (getpos _centerobj) getPos[random 1000,random 360];
 			_suitable = [_spawnPos, 0, 300, 10, 0, 0.7, 0] call BIS_fnc_findSafePos;
@@ -41,7 +41,7 @@ for "_j" from 0 to (count _cfgGroups)-1 do {
 _groupArray deleteat 0;
 if (_groupsToSpawn != 0) then {
 	for "_i" from 1 to _groupsToSpawn do {
-		_spawnPos = [0,0,0];
+		_spawnPos = [4484.67,12079,24.1537];
 		while {surfaceIsWater _spawnPos || (_suitable select 0)<=100 || (_suitable select 1) >= 13000 } do {
 			_spawnPos = (getpos _centerobj) getPos[random 999,random 360];
 			_suitable = [_spawnPos, 0, 300, 10, 0, 0.7, 0] call BIS_fnc_findSafePos;
@@ -59,7 +59,7 @@ if (_groupsToSpawn != 0) then {
 };
 if (_tanksToSpawn != 0) then {
 	for "_i" from 1 to _tanksToSpawn do {
-		_spawnPos = [0,0,0];
+		_spawnPos = [4484.67,12079,24.1537];
 		while {surfaceIsWater _spawnPos || (_suitable select 0)<=100 || (_suitable select 1) >= 13000 } do {
 			_spawnPos = (getpos _centerobj) getPos[random 1000,random 360];
 			_suitable = [_spawnPos, 0, 300, 10, 0, 0.7, 0] call BIS_fnc_findSafePos;

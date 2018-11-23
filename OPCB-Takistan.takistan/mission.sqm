@@ -8,14 +8,14 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=361;
+		nextID=366;
 	};
 	class Camera
 	{
-		pos[]={8123.0518,316.16553,1992.5676};
-		dir[]={-0.79346174,-0.40687072,-0.45271412};
-		up[]={-0.35344493,0.91346407,-0.20165922};
-		aside[]={-0.49558625,-5.9782178e-007,0.86860311};
+		pos[]={8169.7417,302.5867,2015.0247};
+		dir[]={-0.68927312,-0.39963165,0.60435796};
+		up[]={-0.30049524,0.91667116,0.26347533};
+		aside[]={0.65928984,6.0885213e-008,0.75192285};
 	};
 };
 binarizationWanted=0;
@@ -18966,19 +18966,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8149.7637,297.09442,2058.7952};
-				angles[]={0,4.1277337,0};
+				position[]={8149.7642,297.09409,2058.7949};
+				angles[]={0,4.1277385,0};
 			};
 			side="Empty";
 			class Attributes
 			{
-				init="call{[] execvm ""scripts\lightswitch.sqf"";}";
 				name="jeff";
 				disableSimulation=1;
 			};
 			id=51;
 			type="Land_Laptop_device_F";
-			atlOffset=0.81100464;
+			atlOffset=0.81066895;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -19227,7 +19226,7 @@ class Mission
 			alpha=0.13177;
 			a=1000;
 			b=1000;
-			angle=210.23386;
+			angle=210.23376;
 			id=58;
 		};
 		class Item14
@@ -26011,8 +26010,8 @@ class Mission
 		class Item144
 		{
 			dataType="Trigger";
-			position[]={8195.1289,296.13214,2056.1079};
-			angle=2.5645597;
+			position[]={8205.3877,296.04001,2040.1238};
+			angle=2.6031423;
 			class Attributes
 			{
 				condition="call{(""LandVehicle"" countType thislist  > 0) && ((getpos (thislist select 0)) select 2 < 1) " \n "}";
@@ -27110,11 +27109,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={11028.805,401.91522,5585.4761};
+				position[]={11028.805,401.91562,5585.4761};
 			};
 			id=295;
 			type="ALiVE_civ_placement";
-			atlOffset=-59.15036;
+			atlOffset=-59.149963;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -27467,11 +27466,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={8977.1191,408.41895,5618.9292};
+				position[]={8977.1191,408.41861,5618.9292};
 			};
 			id=296;
 			type="ALiVE_mil_placement";
-			atlOffset=161.94633;
+			atlOffset=161.946;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -27527,7 +27526,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="0.2";
+							value="0";
 						};
 					};
 				};
@@ -28219,11 +28218,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={10237.121,330.80267,5585.4761};
+				position[]={10237.121,330.80292,5585.4761};
 			};
 			id=298;
 			type="ALiVE_mil_ied";
-			atlOffset=-207.37323;
+			atlOffset=-207.37299;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -28279,7 +28278,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=20;
+							value=0;
 						};
 					};
 				};
@@ -28393,7 +28392,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=20;
+							value=50;
 						};
 					};
 				};

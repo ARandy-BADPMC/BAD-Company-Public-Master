@@ -1,8 +1,8 @@
 _howBig = _this select 0;
 missionNamespace setVariable["task_underway",true];
 
-_center = missionNamespace getVariable ["World_center",[5840,5700,0]];
-_suitable = [0,0,0];
+_center = missionNamespace getVariable ["World_center",[6543.22,6469.45,3.05176e-005]];
+_suitable = [4484.67,12079,24.1537];
 private ["_step","_prevStep","_spot","_heading"];
 _list = _suitable;
 
