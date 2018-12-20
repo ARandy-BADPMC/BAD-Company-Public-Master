@@ -44,12 +44,12 @@ _opposite = _dir + 140;
 
 for "_i" from 0 to 5 do {
 	_opposite = _opposite +20;
-	_attackpos = [0,0,0];
+	_attackpos = globalWaterPos;
 	_tries = 5;
 
 	while {surfaceIsWater _attackpos && _tries >0 } do {
 			_attackpos = _guardpos getPos[random [500,700,1000],_opposite];
-			_suitable = [_attackpos, 0, 300, 10, 0, 0.7, 0,[],[[0,0,0],[0,0,0]]] call BIS_fnc_findSafePos;
+			_suitable = [_attackpos, 0, 300, 10, 0, 0.7, 0,[],[globalWaterPos,globalWaterPos]] call BIS_fnc_findSafePos;
 			if (count _suitable == 3) then {
 			  _suitable = [_suitable select 0,_suitable select 1];
 			};
@@ -74,12 +74,12 @@ configfile >> "CfgGroups" >> "East" >> "rhs_faction_vdv" >> "rhs_group_rus_vdv_B
 _opposite = _dir +160;
 for "_i" from 0 to 1 do {
 	_opposite = _opposite +20;
-	_attackpos = [0,0,0];
+	_attackpos = globalWaterPos;
 	_tries = 10;
 		
 	while {surfaceIsWater _attackpos && _tries >0 } do {
 		_attackpos = _guardpos getPos[random [500,700,1000],_opposite];
-		_suitable = [_attackpos, 0, 300, 10, 0, 0.7, 0,[],[[0,0,0],[0,0,0]]] call BIS_fnc_findSafePos;
+		_suitable = [_attackpos, 0, 300, 10, 0, 0.7, 0,[],[globalWaterPos,globalWaterPos]] call BIS_fnc_findSafePos;
 		if (count _suitable == 3) then {
 		  _suitable = [_suitable select 0,_suitable select 1];
 		};

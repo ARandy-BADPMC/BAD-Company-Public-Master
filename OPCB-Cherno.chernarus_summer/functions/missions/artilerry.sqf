@@ -13,10 +13,10 @@ _comps = ["mortar1","mortar2","mortar3"];
 	
 	for "_i" from 0 to 3 do {
 
-		_markpos = [0,0,0];
+		_markpos = globalWaterPos;
 		while { surfaceIsWater _markpos || (_markpos distance officer_jeff <1000) || surfaceIsWater _base || _base distance _guard < 400} do {
 			_markpos = _village getPos[random [500,1000,1500],random 360];
-			_base = [_markpos,15,500,10, 0, 0.7, 0,[],[[0,0,0],[0,0,0]]] call BIS_fnc_findSafePos;
+			_base = [_markpos,15,500,10, 0, 0.7, 0,[],[globalWaterPos,globalWaterPos]] call BIS_fnc_findSafePos;
 		};
 		
 		_civilian = _group createUnit ["C_IDAP_Man_AidWorker_01_F", _base, [], 2, "NONE"];

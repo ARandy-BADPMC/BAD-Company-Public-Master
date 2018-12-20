@@ -12,6 +12,9 @@ missionNamespace setVariable ["enemy_groups",[]];
 	[_x, "LISTEN_BRIEFING", "Light"] call BIS_fnc_ambientAnim;
 } forEach [officer_jeff,tank_spawner,heli_jeff]; 
 
+globalWaterPos = [0,0,0]; //universal for all maps, has to be changed manually 
+
+
 /*
 /\
 ||
