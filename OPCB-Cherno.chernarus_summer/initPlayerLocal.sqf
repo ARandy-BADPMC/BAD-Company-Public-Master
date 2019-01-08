@@ -35,6 +35,16 @@ jeff addaction ["Lights off", {
 	_lamp sethit ["light_2_hitpoint",1];	
 }];
 
+base_flag addAction ["Teleport to Shootingrange", {
+	[player,[12028,12608.6,0]] remoteExec ["setPos",2];
+}];
+base_flag addAction ["Teleport to Heli-Spawner", {
+	[player,[12204.2,12621,0]] remoteExec ["setPos",2];
+}];
+ShootingRange_flag addAction ["Teleport to Base", {
+	[player,[12129.8,18100.4,0]] remoteExec ["setPos",2];
+}];
+
 Helicopter_loadouts = 
 [
  	"RHS_A10",["Anti-Tank",["rhs_mag_ANALQ131","rhs_mag_FFAR_7_USAF","rhs_mag_agm65d_3","rhs_mag_gbu12","rhs_mag_gbu12","","rhs_mag_gbu12","rhs_mag_gbu12","rhs_mag_agm65d_3","rhs_mag_FFAR_7_USAF","rhs_mag_Sidewinder_2"],"CAS",["rhs_mag_ANALQ131","rhs_mag_FFAR_7_USAF","rhs_mag_agm65d","rhs_mag_gbu12","rhs_mag_gbu12","","rhs_mag_gbu12","rhs_mag_gbu12","rhs_mag_agm65d","rhs_mag_FFAR_7_USAF","rhs_mag_Sidewinder_2"]],

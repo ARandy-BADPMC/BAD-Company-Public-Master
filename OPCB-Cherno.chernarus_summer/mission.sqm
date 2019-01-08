@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={12079.223,173.88927,12676.726};
-		dir[]={-0.28316525,-0.3604852,-0.88882047};
-		up[]={-0.10944702,0.9327389,-0.34353703};
-		aside[]={-0.95287222,3.6372512e-007,0.30356944};
+		pos[]={12029.785,184.02257,12641.568};
+		dir[]={0.74166673,-0.65908271,-0.12546533};
+		up[]={0.64990681,0.75201774,-0.10994277};
+		aside[]={-0.16681239,-6.7322981e-007,-0.98608524};
 	};
 };
 binarizationWanted=0;
@@ -19408,7 +19408,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="call{[this,[""Teleport to Shootingrange"",{player setPos [12028,12608.6,0];}]] remoteExec [""addAction"",0,true]; [this,[""Teleport to Heli-Spawner"",{player setPos [12204.2,12621,0];}]] remoteExec [""addAction"",0,true];}";
+				name="base_flag";
 			};
 			id=63;
 			type="Flag_NATO_F";
@@ -26139,13 +26139,13 @@ class Mission
 			class PositionInfo
 			{
 				position[]={12027.96,162.77681,12608.604};
-				angles[]={0,4.3124585,0};
+				angles[]={0,4.3124642,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="call{[this,[""Teleport to Base"",{player setPos [12129.8,18100.4,0];}]] remoteExec [""addAction"",0,true];}";
+				name="ShootingRange_flag";
 			};
 			id=290;
 			type="Flag_NATO_F";
@@ -26631,6 +26631,25 @@ class Mission
 				};
 				class Attribute2
 				{
+					property="ALiVE_sys_profile_pathfinding";
+					expression="_this setVariable ['pathfinding',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute3
+				{
 					property="ALiVE_sys_profile_seaTransport";
 					expression="_this setVariable ['seaTransport',_value,true];";
 					class Value
@@ -26648,7 +26667,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute3
+				class Attribute4
 				{
 					property="ALiVE_sys_profile_activeLimiter";
 					expression="_this setVariable ['activeLimiter',_value,true];";
@@ -26667,7 +26686,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute4
+				class Attribute5
 				{
 					property="ALiVE_sys_profile_spawnTypeJetRadius";
 					expression="_this setVariable ['spawnTypeJetRadius',_value,true];";
@@ -26686,7 +26705,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute5
+				class Attribute6
 				{
 					property="ALiVE_sys_profile_speedModifier";
 					expression="_this setVariable ['speedModifier',_value,true];";
@@ -26705,7 +26724,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute6
+				class Attribute7
 				{
 					property="ALiVE_sys_profile_spawnTypeHeliRadius";
 					expression="_this setVariable ['spawnTypeHeliRadius',_value,true];";
@@ -26724,7 +26743,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute7
+				class Attribute8
 				{
 					property="ALiVE_sys_profile_debug";
 					expression="_this setVariable ['debug',_value,true];";
@@ -26743,7 +26762,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute8
+				class Attribute9
 				{
 					property="ALiVE_sys_profile_persistent";
 					expression="_this setVariable ['persistent',_value,true];";
@@ -26762,7 +26781,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute9
+				class Attribute10
 				{
 					property="ALiVE_sys_profile_syncronised";
 					expression="_this setVariable ['syncronised',_value,true];";
@@ -26781,7 +26800,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute10
+				class Attribute11
 				{
 					property="ALiVE_sys_profile_virtualcombat_speedmodifier";
 					expression="_this setVariable ['virtualcombat_speedmodifier',_value,true];";
@@ -26800,7 +26819,7 @@ class Mission
 						};
 					};
 				};
-				nAttributes=11;
+				nAttributes=12;
 			};
 		};
 		class Item150
