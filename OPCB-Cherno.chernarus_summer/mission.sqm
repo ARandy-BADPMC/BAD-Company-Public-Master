@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={12029.785,184.02257,12641.568};
-		dir[]={0.74166673,-0.65908271,-0.12546533};
-		up[]={0.64990681,0.75201774,-0.10994277};
-		aside[]={-0.16681239,-6.7322981e-007,-0.98608524};
+		pos[]={12052.147,183.03394,12674.243};
+		dir[]={0.18073645,-0.46946284,-0.86437809};
+		up[]={0.096104793,0.88289601,-0.45962626};
+		aside[]={-0.97893178,-4.817266e-007,-0.20468968};
 	};
 };
 binarizationWanted=0;
@@ -89,11 +89,7 @@ addons[]=
 	"rhsusf_c_fmtv",
 	"rhsusf_vehicles",
 	"rhsusf_c_Caiman",
-	"A3_Structures_F_Mil_TentHangar",
-	"PBW_German_Common",
-	"zade_boc",
-	"hlcweapons_core",
-	"BadCo_PublicServer_Extras"
+	"A3_Structures_F_Mil_TentHangar"
 };
 class AddonsMetaData
 {
@@ -19584,12 +19580,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={12046.457,158.89723,12652.841};
-				angles[]={0,0.53669626,0};
+				position[]={12046.457,158.897,12652.84};
+				angles[]={0,0.53668875,0};
 			};
 			id=75;
 			type="ModuleRespawnVehicle_F";
-			atlOffset=0.097229004;
+			atlOffset=0.097000122;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -19664,7 +19660,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="1000";
+							value="";
 						};
 					};
 				};
