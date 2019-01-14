@@ -70,6 +70,8 @@ Helicopter_loadouts =
 	"C_Heli_Light_01_civil_F",["Unarmed",[]],
 	"B_Heli_Light_01_F",["Unarmed",[]],
 	"RHS_MELB_MH6M",["Unarmed",[]],
+	"RHS_Mi8AMTSh_vvs", ["Unarmed",[]],
+	"RHS_Mi24P_vdv", ["Standard",["rhs_mag_fab250","rhs_mag_fab250","rhs_mag_b8v20a_s8kom","rhs_mag_b8v20a_s8kom","rhs_mag_9M120M_Mi24_2x","rhs_mag_9M120M_Mi24_2x"],"Rockets", ["rhs_mag_ub32_s5m1","rhs_mag_ub32_s5m1","rhs_mag_ub32_s5m1","rhs_mag_ub16_s5m1","rhs_mag_9M120M_Mi24_2x","rhs_mag_9M120M_Mi24_2x"]],
 	"O_Heli_Transport_04_F", ["Unarmed",[]],
 	"RHS_MELB_H6M",["Unarmed",[]],
 	"B_Heli_Attack_01_dynamicLoadout_F",["Simple",["PylonMissile_1Rnd_ACE_Hellfire_AGM114K","PylonMissile_1Rnd_ACE_Hellfire_AGM114K","PylonRack_12Rnd_PG_missiles","PylonRack_12Rnd_PG_missiles","PylonMissile_1Rnd_ACE_Hellfire_AGM114K","PylonMissile_1Rnd_ACE_Hellfire_AGM114K"]],
