@@ -21,7 +21,7 @@ if(_tankselect != -1) then
 		  if (_maxtanks == 0) then
 		  {
 		  	_maxtanks = 1;
-		  	missionNamespace setVariable ["MaxTanks",1];
+		  	missionNamespace setVariable ["MaxTanks",1],true;
 		    [_vehicle,1] remoteExec ["CHAB_fnc_spawn_tank_server",2];
 
 		  } else {hint "There is already a tank/SPG in game";};
@@ -35,7 +35,7 @@ if(_tankselect != -1) then
 		  if (_maxStatics != 5) then 
 		  {
 			_maxStatics = _maxStatics + 1;
-			missionNamespace setVariable ["MaxStatic",_maxStatics];
+			missionNamespace setVariable ["MaxStatic",_maxStatics,true];
 			[_vehicle,0] remoteExec ["CHAB_fnc_spawn_tank_server",2]; 
 			
 		  } else {hint "5 statics are already in game";};
@@ -44,7 +44,7 @@ if(_tankselect != -1) then
 		  if (_maxAPC != 5) then
 		  {
 		  	_maxAPC = _maxAPC + 1;
-		  	missionNamespace setVariable ["MaxAPC",_maxAPC];
+		  	missionNamespace setVariable ["MaxAPC",_maxAPC,true];
 		    [_vehicle,0] remoteExec ["CHAB_fnc_spawn_tank_server",2];
 
 		  } else{hint "5 APCs are already in game";};

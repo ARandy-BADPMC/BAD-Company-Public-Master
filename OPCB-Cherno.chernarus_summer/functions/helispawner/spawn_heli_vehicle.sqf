@@ -28,7 +28,7 @@ if(_loadout != -1) then
 		  if (_maxAttackChoppers != 2) then
 		  {
 		  	_maxAttackChoppers = _maxattackchoppers + 1;
-		  	missionNamespace setVariable ["MaxAttackHelis",_maxattackchoppers];
+		  	missionNamespace setVariable ["MaxAttackHelis",_maxattackchoppers,true];
 		    [_vehicle,_pylons,1] remoteExec ["CHAB_fnc_spawn_helicopter_server",2];
 
 		  } else {hint "There are already 2 attack helicopters in game";};
@@ -38,7 +38,7 @@ if(_loadout != -1) then
 		  if (_maxTransChoppers != 3) then
 		  {
 		  	_maxTransChoppers = _maxTransChoppers + 1;
-		  	missionNamespace setVariable ["MaxTransHelis",_maxTransChoppers];
+		  	missionNamespace setVariable ["MaxTransHelis",_maxTransChoppers,true];
 		    [_vehicle,_pylons,0] remoteExec ["CHAB_fnc_spawn_helicopter_server",2];
 
 		  } else{hint "3 Transport helicopters are already in game.";};
