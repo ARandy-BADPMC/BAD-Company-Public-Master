@@ -44,16 +44,6 @@ class jey_adminconsole_dialog
 			h = 0.0659743 * safezoneH;
 			action = "['Terminate'] call BIS_fnc_EGSpectator;closeDialog 0";
 		};
-		class jey_leave_zeus: RscButton
-		{
-			idc = 1615;
-			text = "Remove Zeus"; //--- ToDo: Localize;
-			x = 0.466146 * safezoneW + safezoneX; //check x
-			y = 0.697923 * safezoneH + safezoneY;
-			w = 0.0572917 * safezoneW;
-			h = 0.0659743 * safezoneH;
-			action = "[] call CHAB_fnc_zeus_out";
-		};
 		class fix_task: RscButton
 		{
 			idc = 1632;

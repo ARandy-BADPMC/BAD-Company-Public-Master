@@ -250,14 +250,6 @@ class chainbreaker
 		{
 			file = "functions\adminconsole\zeus_server.sqf";
 		};
-		class zeus_out
-		{
-			file = "functions\adminconsole\zeus_out.sqf";
-		};
-		class zeus_out_server
-		{
-			file = "functions\adminconsole\zeus_out_server.sqf";
-		};
 		class getpilots
 		{
 			file = "functions\adminconsole\getpilots.sqf";
