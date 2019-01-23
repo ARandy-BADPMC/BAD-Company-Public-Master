@@ -4,7 +4,7 @@ _howBig = _this select 0;
 if (_howBig < 500) then {
 	missionNamespace setVariable["task_underway",true];
 
-	_center = missionNamespace getVariable ["World_center",[5840,5700,0]];
+	_center = missionNamespace getVariable ["World_center",[5959.48,6805.15,0]];
 	_suitable = globalWaterPos;
 	private ["_step","_prevStep","_spot","_heading"];
 	_list = _suitable;
