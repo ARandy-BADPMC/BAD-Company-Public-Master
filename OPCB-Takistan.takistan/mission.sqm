@@ -8,11 +8,11 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=421;
+		nextID=422;
 	};
 	class MarkerIDProvider
 	{
-		nextID=2;
+		nextID=3;
 	};
 	class Camera
 	{
@@ -14325,7 +14325,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=210;
+		items=211;
 		class Item0
 		{
 			dataType="Group";
@@ -29020,7 +29020,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7761.96,296.04001,1690.8501};
-				angles[]={-0,4.1923561,0};
+				angles[]={0,4.1923561,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29794,7 +29794,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7758.9482,297.25,1670.5706};
-				angles[]={-0,2.6578746,0};
+				angles[]={0,2.6578746,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29811,7 +29811,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7766.356,297.25,1674.7618};
-				angles[]={-0,2.6578746,0};
+				angles[]={0,2.6578746,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29828,7 +29828,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7773.7979,297.25,1678.9774};
-				angles[]={-0,2.6578746,0};
+				angles[]={0,2.6578746,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29845,7 +29845,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7781.2627,297.25,1683.2412};
-				angles[]={-0,2.6578746,0};
+				angles[]={0,2.6578746,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29862,7 +29862,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7743.2104,297.25003,1697.2993};
-				angles[]={-0,2.6578746,0};
+				angles[]={0,2.6578746,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29880,7 +29880,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7750.6182,297.25003,1701.4906};
-				angles[]={-0,2.6578746,0};
+				angles[]={0,2.6578746,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29898,7 +29898,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7758.0601,297.25003,1705.7062};
-				angles[]={-0,2.6578746,0};
+				angles[]={0,2.6578746,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29916,7 +29916,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7765.5249,297.25,1709.97};
-				angles[]={-0,2.6578746,0};
+				angles[]={0,2.6578746,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29933,7 +29933,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7773.4497,298.45749,1714.2472};
-				angles[]={-0,4.5617609,0};
+				angles[]={0,4.5617609,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29943,6 +29943,7 @@ class Mission
 			};
 			id=409;
 			type="Land_RepairDepot_01_tan_F";
+			atlOffset=-0.00051879883;
 		};
 		class Item205
 		{
@@ -29959,6 +29960,7 @@ class Mission
 			};
 			id=413;
 			type="Land_LampAirport_F";
+			atlOffset=-3.0517578e-005;
 		};
 		class Item206
 		{
@@ -29975,6 +29977,7 @@ class Mission
 			};
 			id=414;
 			type="Land_LampAirport_F";
+			atlOffset=-3.0517578e-005;
 		};
 		class Item207
 		{
@@ -29982,7 +29985,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7765.6597,296.7738,1707.7512};
-				angles[]={-0,4.1623836,0};
+				angles[]={0,4.1623836,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29992,6 +29995,7 @@ class Mission
 			};
 			id=415;
 			type="Land_Bomb_Trolley_01_F";
+			atlOffset=-0.00021362305;
 		};
 		class Item208
 		{
@@ -29999,7 +30003,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7768.9819,296.77386,1709.7102};
-				angles[]={-0,4.1971154,0};
+				angles[]={0,4.1971154,0};
 			};
 			side="Empty";
 			flags=4;
@@ -30009,6 +30013,7 @@ class Mission
 			};
 			id=416;
 			type="Land_Bomb_Trolley_01_F";
+			atlOffset=-0.00015258789;
 		};
 		class Item209
 		{
@@ -30016,7 +30021,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7771.979,296.77322,1710.2131};
-				angles[]={-0,3.9163618,0};
+				angles[]={0,3.9163618,0};
 			};
 			side="Empty";
 			flags=4;
@@ -30026,6 +30031,19 @@ class Mission
 			};
 			id=417;
 			type="Land_Missle_Trolley_02_F";
+			atlOffset=-0.00012207031;
+		};
+		class Item210
+		{
+			dataType="Marker";
+			position[]={5842.2573,162.96902,7422.3604};
+			name="ied";
+			markerType="RECTANGLE";
+			type="rectangle";
+			a=5500;
+			b=5500;
+			angle=241.42899;
+			id=421;
 		};
 	};
 	class Connections
