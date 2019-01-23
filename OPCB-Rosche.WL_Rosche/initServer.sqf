@@ -5,6 +5,9 @@ missionNamespace setVariable ["task_spot",[5840,5700,0]];
 
 missionNamespace setVariable ["enemy_groups",[]];
 
+missionNamespace setVariable ["Chapo_trigger",false];
+
+
 missionNamespace setVariable ["MaxTanks",0,true];
 missionNamespace setVariable ["MaxAttackHelis",0,true];
 missionNamespace setVariable ["MaxTransHelis",0,true];
@@ -20,7 +23,7 @@ missionNamespace setVariable ["Zeus_group",_zeus_group];
 	[_x, "LISTEN_BRIEFING", "Light"] call BIS_fnc_ambientAnim;
 } forEach [officer_jeff,tank_spawner,heli_jeff]; 
 
-globalWaterPos = [0,0,0]; //universal for all maps, has to be changed manually 
+globalWaterPos = [-2802.01,-6933.85,4.90181]; //universal for all maps, has to be changed manually 
 
 
 /*
