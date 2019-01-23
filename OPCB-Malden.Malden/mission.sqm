@@ -96,7 +96,11 @@ addons[]=
 	"A3_Supplies_F_Exp_Ammoboxes",
 	"ace_dragging",
 	"A3_Weapons_F_Ammoboxes",
-	"rhsusf_c_mrzr"
+	"rhsusf_c_mrzr",
+	"PBW_German_Common",
+	"zade_boc",
+	"hlcweapons_core",
+	"BadCo_PublicServer_Extras"
 };
 class AddonsMetaData
 {
