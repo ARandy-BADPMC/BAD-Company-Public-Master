@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=585;
+		nextID=588;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={828.7793,68.663063,4541.2915};
-		dir[]={0.27704427,-0.42608115,0.86122215};
-		up[]={0.13047995,0.90468514,0.40561134};
-		aside[]={0.95195866,1.9499566e-008,-0.30623278};
+		pos[]={848.86383,26.099047,4627.6641};
+		dir[]={0.49260348,-0.49424049,0.71632993};
+		up[]={0.28006217,0.86930931,0.40725636};
+		aside[]={0.82399565,4.976755e-008,-0.56664366};
 	};
 };
 binarizationWanted=0;
@@ -18660,8 +18660,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={876.48492,15.13,4664.6997};
-				angles[]={0,4.00984,0};
+				position[]={868.27045,15.13,4655.4331};
+				angles[]={-0,4.00984,0};
 			};
 			id=48;
 			type="ModuleRespawnPosition_F";
@@ -20714,8 +20714,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={819.01007,15.13,4337.4185};
-				angles[]={0,1.3849983,0};
+				position[]={809.08594,15.13,4297.9917};
+				angles[]={-0,1.3849983,0};
 			};
 			side="Empty";
 			class Attributes
@@ -31047,7 +31047,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={566.8241,12.221041,6758.7725};
-				angles[]={-0,5.224194,0};
+				angles[]={0,5.224194,0};
 			};
 			side="Empty";
 			flags=4;
@@ -31063,7 +31063,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={565.01959,12.221041,6757.6934};
-				angles[]={-0,5.8697405,0};
+				angles[]={0,5.8697405,0};
 			};
 			side="Empty";
 			flags=4;
@@ -31079,7 +31079,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={563.06451,12.221041,6757.3945};
-				angles[]={-0,0.29359385,0};
+				angles[]={0,0.29359385,0};
 			};
 			side="Empty";
 			flags=4;
