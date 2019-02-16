@@ -6,7 +6,7 @@ if(_tankselect != -1) then
 {	
 	_vehicle = _tank lbData _tankselect;
 
-	_nObjects= nearestObjects [[12013.8,12646.8,0], ["all"], 7];
+	_nObjects= nearestObjects [[11574,11961.7,0.596609], ["all"], 7];
 
 	//remoteExec ["CHAB_fnc_setServerVariables",2];
 	_maxtanks = missionNamespace getVariable ["MaxTanks",1];
