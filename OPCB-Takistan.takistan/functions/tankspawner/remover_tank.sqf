@@ -8,7 +8,7 @@ waitUntil {
 _ctrl = (findDisplay 9903) displayCtrl 1500;
 _nearestVeh = [];
 _i = 0;
-	_nearestVeh = nearestObjects [[8194.85,2057.71,0], ["LandVehicle"], 50];
+	_nearestVeh = nearestObjects [[8194.85,2057.71,0], ["LandVehicle"], 15];
 	{	
 		_asd = _x getVariable ["vehicleSerial","TIN"];
 		if (_asd == "TIN") then {
