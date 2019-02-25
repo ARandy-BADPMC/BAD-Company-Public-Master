@@ -8,11 +8,11 @@ missionNamespace setVariable ["enemy_groups",[]];
 missionNamespace setVariable ["Chapo_trigger",false];
 
 
-missionNamespace setVariable ["MaxTanks",0];
-missionNamespace setVariable ["MaxAttackHelis",0];
-missionNamespace setVariable ["MaxTransHelis",0];
-missionNamespace setVariable ["MaxAPC",0];
-missionNamespace setVariable ["MaxStatic",0];
+missionNamespace setVariable ["MaxTanks",0,true];
+missionNamespace setVariable ["MaxAttackHelis",0,true];
+missionNamespace setVariable ["MaxTransHelis",0,true];
+missionNamespace setVariable ["MaxAPC",0,true];
+missionNamespace setVariable ["MaxStatic",0,true];
 
 _zeus_group = createGroup sideLogic;
 
