@@ -17,9 +17,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={8427.918,412.08542,1888.6677};
-		dir[]={-0.91238827,-0.40927166,0.011108194};
-		up[]={-0.4092842,0.91239303,0.004982342};
-		aside[]={0.012174796,3.9155907e-007,0.99996889};
+		dir[]={-0.80449992,-0.40547648,0.43410778};
+		up[]={-0.35687941,0.91408592,0.19257118};
+		aside[]={0.47489724,3.6833808e-007,0.88009095};
 	};
 };
 binarizationWanted=0;
@@ -30121,7 +30121,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={7926.0273,296.04138,1875.4302};
-			angle=2.6259551;
+			angle=2.6259546;
 			class Attributes
 			{
 				condition="call{(""AIR"" countType thislist  > 0) && ((getpos (thislist select 0)) select 2 < 1) " \n "}";
