@@ -180,6 +180,10 @@ class chainbreaker
 		{
 			file = "functions\shk_patrol.sqf";
 		};
+		class playerScale
+		{
+			file = "functions\miscellaneous\playerScale.sqf";
+		};
 		class serverGroups
 		{
 			file = "functions\miscellaneous\serverGroups.sqf";
