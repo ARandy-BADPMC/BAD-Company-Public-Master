@@ -25,8 +25,8 @@ _cityRadA=_cityRadB;};
 _cacheBuildings=[_cityPos,_cityRadA]call SL_fn_findBuildings;
 diag_log format["%4 Ciudad: %1,%2,%3",_cityName,_cityRadA,count _cacheBuildings,_j];
 
-//for "_i" from 1 to(paramsArray select 2)step 1 do{
-for "_i" from 0 to(random 1)step 1 do{
+for "_i" from 1 to(paramsArray select 2)step 1 do{
+//for "_i" from 0 to(random 1)step 1 do{
 if(count _cacheBuildings > 0)then{
 if(round(random 1)==1)then{
 _selectedItem=_intelItems call BIS_fnc_selectRandom;

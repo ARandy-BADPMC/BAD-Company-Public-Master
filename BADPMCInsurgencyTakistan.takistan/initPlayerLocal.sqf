@@ -5,6 +5,7 @@ call compileFinal preprocessfilelinenumbers "scripts\ArsenalWhitelist.sqf"; //mo
 
 jeff addAction ["<t color='#FF0000'>Request a Task</t>", "[0] remoteExec ['CHAB_fnc_mission_selector',2]", nil, 1, false, true, "", "true", 10, false,""];
 
+
 switch (typeOf player) do { 
 	case "rhsusf_airforce_jetpilot" : {  player call CHAB_fnc_whitelist; }; 
 	case "rhsusf_army_ocp_helipilot" : {  

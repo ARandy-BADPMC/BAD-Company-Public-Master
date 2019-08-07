@@ -20,7 +20,7 @@ minPlayerDistance = 300; //meters
 class Params {
 	class EmtpyLine1 {
 	//paramsArray[0]
-		title=":: M I S S I O N   S E T T I N G S ::";
+		title=" M I S S I O N - S E T T I N G S ";
 		values[]={0,0};
 		texts[]={"",""};
 		default=0;			
@@ -37,21 +37,21 @@ class Params {
 		title="Number of INTEL items per town";
 		values[]={1,2,3,4,5,6,7,8};
 		texts[]={"1 - Extreme","2 - Very Hard (Default)","3 - Hard","4 - Hard\Medium","5 - Medium","6 - Medium/Easy","7 - Easy","8 - Very Easy"};
-		default=2;
+		default=3;
 	};
 	class Civs {
 	//paramsArray[3]
 		title="Wandering Civilians / Traffic (On/Off)";
 		values[]={1,0};
 		texts[]={"On (Default)","Off"};
-		default=1;
+		default=0;
 	};
 	class Daytime {
 	//paramsArray[4]
 		title="Time";
 		texts[]={"Dawn","Morning (Default)","Noon","Afternoon","Evening","Night"};
 		values[]={5,8,12,14,18,0};
-		default=5;
+		default=14;
 		function="BIS_fnc_paramDaytime";
  		isGlobal=0;
 	};
