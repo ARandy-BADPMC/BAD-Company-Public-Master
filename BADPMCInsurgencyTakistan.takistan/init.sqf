@@ -18,21 +18,21 @@ execVM"Scripts\ied.sqf";
 //EOS SYSTEM
 []execVM "eos\OpenMe.sqf";
 
-#include <modules\modules.hpp>
+#include <core\modules\modules.hpp>
 #ifndef execNow
 #define execNow call compile preProcessFileLineNumbers
 #endif
 #ifdef cacheScript
-execNow "modules\cacheScript\cache.sqf";
+execNow "core\modules\cacheScript\cache.sqf";
 #endif
 #ifdef intelSpawn
 if(isServer || isDedicated)then{
-[]execVM "modules\cacheScript\spawnIntel.sqf";};
+[]execVM "core\modules\cacheScript\spawnIntel.sqf";};
 #endif
 
-#include "modules\cacheScript\fn\fn.sqf"
-#include "modules\cacheScript\fn\cacheFn.sqf"
-#include "modules\cacheScript\fn\KRON_Str.sqf"
+#include "core\modules\cacheScript\fn\fn.sqf"
+#include "core\modules\cacheScript\fn\cacheFn.sqf"
+#include "core\modules\cacheScript\fn\KRON_Str.sqf"
 #include "eos\fn\fn.sqf"
 #ifndef execNow
 #define execNow call compile preprocessFileLineNumbers

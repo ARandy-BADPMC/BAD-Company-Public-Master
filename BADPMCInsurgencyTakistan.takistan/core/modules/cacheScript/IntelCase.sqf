@@ -1,5 +1,5 @@
 private["_intelItems","_case","_intelPosition","_unit"];
-_intelItems="Land_Suitcase_F";
+_intelItems="LCargoPlaftorm_01_brown_F";
 _unit=(_this select 0)select 0;
 _intelPosition=[(getPos _unit select 0)+1,(getPos _unit select 1),getPosATL _unit select 2];
 _case=createVehicle[_intelItems,_intelPosition,[],0,"None"];

@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1554;
+		nextID=1555;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8255.1465,312.13019,2130.2756};
-		dir[]={0.64242709,-0.55698335,-0.5264082};
-		up[]={0.43084759,0.83049947,-0.353039};
-		aside[]={-0.63381988,-6.3912012e-007,-0.7735104};
+		pos[]={8180.2847,354.64603,2186.697};
+		dir[]={0.44077158,-0.6895113,-0.57479829};
+		up[]={0.41959462,0.72422975,-0.54718268};
+		aside[]={-0.79357642,-8.6118234e-007,-0.60853744};
 	};
 };
 binarizationWanted=0;
@@ -14985,8 +14985,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8058.5083,296.53824,1962.5099};
-						angles[]={0,5.7264967,0};
+						position[]={8058.5078,296.53824,1962.51};
+						angles[]={0,5.7264953,0};
 					};
 					side="West";
 					flags=7;
@@ -30585,13 +30585,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8277.3398,296.04144,2116.9546};
-						angles[]={0,2.5753036,0};
+						position[]={8277.3398,296.04144,2116.9551};
+						angles[]={0,2.5753031,0};
 					};
 					side="West";
 					flags=6;
 					class Attributes
 					{
+						isPlayer=1;
 						isPlayable=1;
 					};
 					id=1148;
@@ -31050,8 +31051,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8274.6543,296.04144,2115.6963};
-						angles[]={0,2.5500591,0};
+						position[]={8274.6543,296.04144,2115.696};
+						angles[]={0,2.5500658,0};
 					};
 					side="West";
 					flags=6;
@@ -36115,17 +36116,58 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8398.7646,296.03922,1879.9032};
-						angles[]={6.2816033,2.5324886,0};
+						position[]={8398.7646,296.03922,1879.9031};
+						angles[]={6.2815971,2.5324903,0};
 					};
 					side="West";
 					flags=6;
 					class Attributes
 					{
-						isPlayer=1;
 					};
 					id=1481;
 					type="B_crew_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male09ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 				class Item3
 				{
