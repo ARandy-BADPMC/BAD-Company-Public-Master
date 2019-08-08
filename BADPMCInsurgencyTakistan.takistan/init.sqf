@@ -18,6 +18,10 @@ execVM"Scripts\ied.sqf";
 //EOS SYSTEM
 []execVM "eos\OpenMe.sqf";
 
+null=[]execVM "eos\OpenMe.sqf";0
+
+null=[]execVM "cos\cosInit.sqf";
+
 #include <core\modules\modules.hpp>
 #ifndef execNow
 #define execNow call compile preProcessFileLineNumbers

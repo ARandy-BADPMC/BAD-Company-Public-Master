@@ -68,3 +68,4 @@ _nearbyLocations = nearestLocations [[5840,5700,0], ["NameCity","NameCityCapital
 
 missionNamespace setVariable ["Cities",_nearbyLocations];
 
+
