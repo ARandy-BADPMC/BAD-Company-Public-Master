@@ -14,6 +14,7 @@ missionNamespace setVariable ["MaxTransHelis",0,true];
 missionNamespace setVariable ["MaxAPC",0,true];
 missionNamespace setVariable ["MaxStatic",0,true];
 
+
 _zeus_group = createGroup sideLogic;
 
 missionNamespace setVariable ["Zeus_group",_zeus_group];
