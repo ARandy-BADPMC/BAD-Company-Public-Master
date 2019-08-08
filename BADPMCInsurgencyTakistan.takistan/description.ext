@@ -35,8 +35,8 @@ class Params {
 	class intelItems {
 	//paramsArray[2]
 		title="Number of INTEL items per town";
-		values[]={1,2,3,4,5,6,7,8};
-		texts[]={"1 - Extreme","2 - Very Hard (Default)","3 - Hard","4 - Hard\Medium","5 - Medium","6 - Medium/Easy","7 - Easy","8 - Very Easy"};
+		values[]={1,2,3,4,5,6,7,8,15};
+		texts[]={"1 - Extreme","2 - Very Hard","3 - Hard","4 - Hard\Medium","5 - Medium","6 - Medium/Easy","7 - Easy","8 - Very Easy","15 - Debug"};
 		default=3;
 	};
 	class Civs {
@@ -67,16 +67,16 @@ class Params {
 		class vDist {
 	//paramsArray[6]
 		title="View Distance (meters)";
-		texts[]={"750m","1000m (Default)","1200m","1600m","1800m","2000m","2500m","3000m","3500m","4000m"};
+		texts[]={"750m","1000m","1200m","1600m","1800m","2000m","2500m","3000m","3500m","4000m"};
 		values[]={750,1000,1200,1600,1800,2000,2500,3000,3500,4000};
-		default=1000;
+		default=1600;
 	};
 	class noGrass {
 	//paramsArray[7]
 		title="Grass (On/Off)";
 		values[]={48,50};
-		texts[]={"On (Default)","Off"};
-		default=48;
+		texts[]={"On","Off"};
+		default=50;
 	};
 	class Shadows {
 	//paramsArray[8]
