@@ -18,7 +18,7 @@ execVM"Scripts\ied.sqf";
 //EOS SYSTEM
 []execVM "eos\OpenMe.sqf";
 
-null=[]execVM "eos\OpenMe.sqf";0
+null=[]execVM "eos\OpenMe.sqf";
 
 null=[]execVM "cos\cosInit.sqf";
 

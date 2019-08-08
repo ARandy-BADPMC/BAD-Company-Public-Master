@@ -9,7 +9,7 @@ Whiskey Company - Tactical Realism http://www.TheWhiskeyCo.com/
 private["_markers","_intelItems","_unit","_nearestPosition","_pos","_selectedItem","_laptop","_cacheBuildings","_cities","_multi","_intelcount","_targetBuilding","_intelPosition","_i","_m","_j"];
 laptop=[];
 publicVariable "laptop";
-_intelItems=["CargoPlaftorm_01_brown_F"];
+_intelItems=["Land_Laptop_unfolded_F","SatPhone","Land_Suitcase_F","EvMoscow","EvMap","Land_PortableLongRangeRadio_F","Land_MobilePhone_old_F","Land_HandyCam_F"];
 _cities=call SL_fn_urbanAreas;
 
 _j=0;
