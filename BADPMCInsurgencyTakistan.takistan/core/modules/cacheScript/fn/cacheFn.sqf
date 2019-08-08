@@ -38,7 +38,6 @@ _x=_x+1+random 4;
 sleep 1;};};
 intelPickup={
 private["_intelItems","_intel","_used","_ID","_cases","_case","_cache"];
-_intelItems=["CargoPlaftorm_01_brown_F"];
 _intelItems=["Land_Laptop_unfolded_F","SatPhone","Land_Suitcase_F","EvMoscow","EvMap","Land_PortableLongRangeRadio_F","Land_MobilePhone_old_F","Land_HandyCam_F"];
 _intel=_this select 0;
 _used=_this select 1;
