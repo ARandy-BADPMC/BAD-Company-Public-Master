@@ -32,7 +32,7 @@ _markerArray pushBack (format ["mkr%1",_i]);
 
 };
 
-[_markerArray,[1,1],[1,2,50],[1,0,50],[0],[0],[0,0],[5,2,250,EAST,TRUE,FALSE]] call EOS_Spawn;
+[_markerArray,[1,1],[1,2,50],[0,0],[0],[0],[0,0],[5,2,250,EAST,TRUE,FALSE]] call EOS_Spawn;
 
 //Vehicles
 
