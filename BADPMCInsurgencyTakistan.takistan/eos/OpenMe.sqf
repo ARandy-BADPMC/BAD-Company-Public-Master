@@ -32,7 +32,7 @@ _markerArray pushBack (format ["mkr%1",_i]);
 
 };
 
-[_markerArray,[1,1],[1,2,50],[1,0,50],[0],[0],[0,0],[5,2,400,EAST,TRUE,FALSE]] call EOS_Spawn;
+[_markerArray,[1,1],[1,2,50],[1,0,50],[0],[0],[0,0],[5,2,250,EAST,TRUE,FALSE]] call EOS_Spawn;
 
 //Vehicles
 
@@ -44,7 +44,7 @@ _markerArray pushBack (format ["mkr%1",_i]);
 
 };
 
-[_markerArray,[0,0],[1,1,35],[2,0,50],[2,50],[0],[0,0],[5,2,250,EAST,TRUE,FALSE]] call EOS_Spawn;
+[_markerArray,[0,0],[1,1,35],[1,0,50],[1,25],[0],[0,0],[5,2,250,EAST,TRUE,FALSE]] call EOS_Spawn;
 
 //Choppers
 
@@ -56,7 +56,7 @@ _markerArray pushBack (format ["mkr%1",_i]);
 
 };
 
-[_markerArray,[0,0],[1,1,45],[0,0,0],[2,50],[0],[1,0,75],[5,2,200,EAST,TRUE,FALSE]] call EOS_Spawn;
+[_markerArray,[0,0],[1,1,45],[0,0,0],[2,50],[0],[1,0,65],[5,2,200,EAST,TRUE,FALSE]] call EOS_Spawn;
 
 //Bastions
 
@@ -68,4 +68,4 @@ _markerArray pushBack (format ["mkr%1",_i]);
 
 };
 
-[_markerArray,[3,1],[1,0],[0],[1,0],[5,0,EAST,false,false],[10,2,60,TRUE,FALSE]] call Bastion_Spawn;
+[_markerArray,[3,1],[1,0],[0],[1,5],[5,0,EAST,false,false],[10,2,60,TRUE,FALSE]] call Bastion_Spawn;

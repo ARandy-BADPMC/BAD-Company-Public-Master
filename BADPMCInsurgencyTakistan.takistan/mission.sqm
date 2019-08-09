@@ -16583,7 +16583,7 @@ class Mission
 			alpha=0.13177;
 			a=750;
 			b=750;
-			angle=210.2338;
+			angle=210.23376;
 			id=58;
 		};
 		class Item12

@@ -77,7 +77,7 @@ _tempArray=[];
 	if (_faction==5) then {
 	_InfPool=	["rhs_vdv_des_at","rhs_vdv_des_efreitor","rhs_vdv_des_grenadier_rpg","rhs_vdv_des_strelok_rpg_assist","rhs_vdv_des_engineer","rhs_vdv_des_aa","rhs_vdv_des_machinegunner","rhs_vdv_des_arifleman","rhs_vdv_des_machinegunner_assistant","rhs_vdv_des_medic","rhs_vdv_des_rifleman","rhs_vdv_des_rifleman_asval","rhs_vdv_des_grenadier","rhs_vdv_des_rifleman_lite","rhs_vdv_des_LAT","rhs_vdv_des_RShG2","rhs_vdv_des_marksman","rhs_vdv_des_marksman_asval","rhs_vdv_des_sergeant","rhs_vdv_des_junior_sergeant"];	
 	_ArmPool=	["rhs_btr80a_vdv","rhs_bmp2_vdv"];
-	_MotPool=	["rhs_tigr_sts_3camo_vdv","rhs_gaz66_zu23_vdv"];
+	_MotPool=	["rhs_tigr_sts_3camo_vdv"];
 	_ACHPool=	["RHS_Mi24V_vdv"];
 	_CHPool=	["RHS_Mi8MTV3_vdv"];
 	_uavPool=	[];
