@@ -21,7 +21,10 @@ if (_isAttack == 1) then
 	{ _helicopter removeWeaponGlobal getText (configFile >> "CfgMagazines" >> _x >> "pylonWeapon") } forEach getPylonMagazines _helicopter;
 	{ _helicopter setPylonLoadOut [_forEachIndex + 1, _x, true, _pylonPaths select _forEachIndex] } forEach _pylons;
 
-	_helicopter addMPEventHandler ["MPKilled",{ missionNamespace setVariable ["MaxAttackHelis",0]; }];
+	_helicopter addMPEventHandler ["MPKilled",{ 
+		_maxtanks = missionNamespace getVariable ["MaxAttackHelis",0];
+		missionNamespace setVariable ["MaxAttackHelis",_maxtanks -1,true];
+	}];
 
 	[_helicopter,_isAttack] remoteExec ["CHAB_fnc_helicopter_restriction",0,true];
 	
@@ -35,11 +38,11 @@ if (_isAttack == 1) then
 	{
 		_current_helis = missionNamespace getVariable ["MaxTransHelis",1];
 		_current_helis = _current_helis -1;
-		missionNamespace setVariable ["MaxTransHelis",_current_helis];
+		missionNamespace setVariable ["MaxTransHelis",_current_helis,true];
 	}];
 
 	if (typeOf _helicopter == "RHS_UH60M_MEV_d") then {
-	  _helicopter setVariable ["ace_medical_medicClass",1,true];
+	  _helicopter setVariable ["ace_medical_medicClass",1];
 	};
 	[_helicopter, _isAttack] remoteExec ["CHAB_fnc_helicopter_restriction",0,true];
 	

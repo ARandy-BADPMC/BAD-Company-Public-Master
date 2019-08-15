@@ -1,0 +1,142 @@
+respawnTemplates[] 				= {"MenuPosition"};
+	
+respawn 						= 3;										// NONE. BIRD. INSTANT. BASE. GROUP. SIDE.	
+respawnOnStart 					= -1;										// 1 to respawn player when he joins the game. Available only for INSTANT and BASE respawn types.	
+respawnButton 					= 1;										// Respawn button in the pause menu											
+forceRotorLibSimulation 		= 0;										// 0 - options based; 1 - force enable; 2 - force disable										
+showGroupIndicator 				= 0;										// Enables/Disables the squad hud	
+enableTeamSwitch 				= 0;
+enableItemsDropping 			= 0;										// disabled with 0
+//enableDebugConsole 				= 1;										// 0 = disabled. 1 = admins, 2 = everybody. 0 is recommended in MP.		
+allowFunctionsLog 				= 0; 										// Log functions to .rpt. disabled with 0					
+enableDebugConsole[] = {"76561198142692277","76561198117073327","76561198048254349"};
+respawnDelay = 30;
+ReviveMode = 0;
+disableChannels[] = {0,2,5,6};
+
+aiKills = 1;
+minPlayerDistance = 300; //meters
+
+class Params {
+	class EmtpyLine1 {
+	//paramsArray[0]
+		title=" M I S S I O N - S E T T I N G S ";
+		values[]={0,0};
+		texts[]={"",""};
+		default=0;			
+	};
+    class cachesLimit {
+	//paramsArray[1]
+		title="Number of caches to hunt";
+		values[]={2,4,6,8,10,12};
+		texts[]={"2","4","6 (Default)","8","10","12"};
+		default=6;
+	};
+	class intelItems {
+	//paramsArray[2]
+		title="Number of INTEL items per town";
+		values[]={1,2,3,4,5,6,7,8,15};
+		texts[]={"1 - Extreme","2 - Very Hard","3 - Hard","4 - Hard\Medium","5 - Medium","6 - Medium/Easy","7 - Easy","8 - Very Easy","15 - Debug"};
+		default=3;
+	};
+	class Civs {
+	//paramsArray[3]
+		title="Wandering Civilians / Traffic (On/Off)";
+		values[]={1,0};
+		texts[]={"On (Default)","Off"};
+		default=0;
+	};
+	class Daytime {
+	//paramsArray[4]
+		title="Time";
+		texts[]={"Dawn","Morning (Default)","Noon","Afternoon","Evening","Night"};
+		values[]={5,8,12,14,18,0};
+		default=14;
+		function="BIS_fnc_paramDaytime";
+ 		isGlobal=0;
+	};
+	class Weather {
+	//paramsArray[5]
+		title="Weather";
+		texts[]={"Clear","Partly Cloudy (Default)","Cloudy","Storm"};
+		values[]={0,40,55,100};
+		default=40;
+		function="BIS_fnc_paramWeather";
+		isGlobal=0;
+	};
+		class vDist {
+	//paramsArray[6]
+		title="View Distance (meters)";
+		texts[]={"750m","1000m","1200m","1600m","1800m","2000m","2500m","3000m","3500m","4000m"};
+		values[]={750,1000,1200,1600,1800,2000,2500,3000,3500,4000};
+		default=1600;
+	};
+	class noGrass {
+	//paramsArray[7]
+		title="Grass (On/Off)";
+		values[]={48,50};
+		texts[]={"On","Off"};
+		default=50;
+	};
+	class Shadows {
+	//paramsArray[8]
+		title="Shadows (On/Off)";
+		values[]={80,0};
+		texts[]={"On (Default)","Off"};
+		default=80;
+	};
+	class enableEnv {
+	//paramsArray[9]
+		title="Ambient Audio/Animals/Insects (On/Off)";
+		values[]={1,0};
+		texts[]={"On (Default)","Off"};
+		default=1;
+	};
+};
+
+
+#include "CHVD\dialog.hpp"
+class CfgFunctions 
+{
+	#include "CHVD\CfgFunctions.hpp"
+	#include "LARs\LARs_spawnComp.cpp"
+	#include "CfgFunctions.hpp"
+	#include "vcom\cfgFunctions.hpp"
+};
+#include "compositions\compositions.cfg"
+#include "functions\defines.hpp"
+#include "functions\dialogs.hpp"
+
+class Extended_PreInit_EventHandlers {
+	VCM_CBASettings = call compile preprocessFileLineNumbers "Vcom\Functions\VCM_CBASettings.sqf";
+};
+
+class CfgRemoteExec
+{
+	// List of script functions allowed to be sent from client via remoteExec
+	class Functions
+	{
+		mode = 2;
+		jip = 1;		
+		
+		class vcm_serverask { allowedTargets = 0;jip = 1; };
+		class VCM_PublicScript { allowedTargets = 0;jip = 1; };
+		class BIS_fnc_debugConsoleExec { allowedTargets = 0;jip = 1; };
+		class SpawnScript { allowedTargets = 0;jip = 1; };
+		class enableSimulationGlobal { allowedTargets = 0;jip = 1; };
+		class VCM_fnc_KnowAbout { allowedTargets = 0;jip = 1; };
+		
+	};
+};
+/*
+class Officer_loadout
+{
+	uniformClass = "TRYK_U_pad_j_blk";
+	linkedItems[] = {"V_PlateCarrier1_rgr","H_HelmetB","ItemCompass","ItemWatch","ItemRadio","NVGoggles"};
+	weapons[] = {"arifle_MX_ACO_pointer_F","hgun_P07_F"};
+	items[] = {"FirstAidKit","FirstAidKit","FirstAidKit"};
+	magazines[] = {"30Rnd_65x39_caseless_mag","16Rnd_9x21_Mag","SmokeShell","HandGrenade","HandGrenade","HandGrenade","HandGrenade","HandGrenade","HandGrenade","HandGrenade","HandGrenade","HandGrenade","HandGrenade","HandGrenade","HandGrenade","HandGrenade","HandGrenade","HandGrenade","HandGrenade","HandGrenade","HandGrenade","HandGrenade","HandGrenade","HandGrenade","HandGrenade","HandGrenade","HandGrenade"};
+
+	[[],[],[],["TRYK_U_pad_j_blk",[["ACRE_PRC343",1],["ACRE_PRC148",1],["ACE_fieldDressing",3],["ACE_elasticBandage",2],["ACE_quikclot",1]]],["TAC_FS_FOL_B",[]],[],"rhs_beret_mp1","rhs_googles_black",[],["ItemMap","ItemGPS","","ItemCompass","ItemWatch",""]]
+
+};*/
