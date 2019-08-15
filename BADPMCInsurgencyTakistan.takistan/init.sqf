@@ -22,6 +22,14 @@ null=[]execVM "eos\OpenMe.sqf";
 
 null=[]execVM "cos\cosInit.sqf";
 
+#include "core\modules\cacheScript\fn\fn.sqf"
+#include "core\modules\cacheScript\fn\cacheFn.sqf"
+#include "core\modules\cacheScript\fn\KRON_Str.sqf"
+#include "eos\fn\fn.sqf"
+#ifndef execNow
+#define execNow call compile preprocessFileLineNumbers
+#endif
+
 #include <core\modules\modules.hpp>
 #ifndef execNow
 #define execNow call compile preProcessFileLineNumbers
@@ -34,13 +42,6 @@ if(isServer || isDedicated)then{
 []execVM "core\modules\cacheScript\spawnIntel.sqf";};
 #endif
 
-#include "core\modules\cacheScript\fn\fn.sqf"
-#include "core\modules\cacheScript\fn\cacheFn.sqf"
-#include "core\modules\cacheScript\fn\KRON_Str.sqf"
-#include "eos\fn\fn.sqf"
-#ifndef execNow
-#define execNow call compile preprocessFileLineNumbers
-#endif
 
 RHSDecalsOff = true;
 

@@ -17,7 +17,7 @@ publicVariable "INS_west_score";
 INS_fncache={
 if(typeName _this=="ARRAY")then{
 cache=_this select 0;
-cache spawn{sleep 2;deleteVehicle _this;};//[cache]spawn cacheDie;
+cache spawn{sleep 2;deleteVehicle _this;}; [cache]spawn cacheDie;
 _killer=_this select 1;
 switch(side _killer)do{
 case WEST:{
@@ -78,13 +78,13 @@ cache=createVehicle["rhs_weapon_crate",_cachePosition,[],0,"NONE"];cache setDama
 cache addEventHandler["handleDamage",{if((_this select 4)=="SatchelCharge_Remote_Ammo")then{(_this select 0)setDamage 1;}else{(_this select 0)setDamage 0;};}];
 cache addMPEventHandler["MPKilled",{_this spawn INS_fncache}];
 cache setPos _cachePosition;cache setDamage 0;publicVariable "cache";
-*/rw2=["Box_NATO_Ammo_F","Box_NATO_Equip_F","B_Slingload_01_Fuel_F","B_Slingload_01_Repair_F","B_Slingload_01_Medevac_F","B_Slingload_01_Cargo_F","B_Slingload_01_Ammo_F","B_LSV_01_armed_F"];
+rw2=["Box_NATO_Ammo_F","Box_NATO_Equip_F","B_Slingload_01_Fuel_F","B_Slingload_01_Repair_F","B_Slingload_01_Medevac_F","B_Slingload_01_Cargo_F","B_Slingload_01_Ammo_F","B_LSV_01_armed_F"];
 cacheTask={waitUntil{player distance cache<2.5};
 [west,["ct"],["Cache has been discovered!  Destroy it with an EXPLOSIVE SATCHEL!","Destroy Cache"],objNull,true,0,true,"Destroy",true]call BIS_fnc_taskCreate;};
 cacheDie={
 ["ct","SUCCEEDED",true]spawn BIS_fnc_taskSetState;
 _rw=rw2 call BIS_fnc_selectRandom;_newRW=createVehicle[_rw,getMarkerPos "rwMkr",[],8,"CAN_COLLIDE"];_newRW setDir 331;};
-[cache]spawn cacheTask;/*
+[cache]spawn cacheTask;
 
 if(INS_west_score==(paramsArray select 1))then{
 end_title={titleText["!All caches have been destroyed!","PLAIN"];};
