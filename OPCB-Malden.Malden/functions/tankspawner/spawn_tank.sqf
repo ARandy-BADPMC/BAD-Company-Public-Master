@@ -6,8 +6,6 @@ waitUntil {
   !isNull (findDisplay 9901)
 };
 _tanks = [
-
-
 "B_APC_Wheeled_01_cannon_F",
 "B_APC_Tracked_01_AA_F",
 "O_T_APC_Tracked_02_cannon_ghex_F",
@@ -15,8 +13,6 @@ _tanks = [
 "rhsusf_CGRCAT1A2_usmc_d",
 "rhsusf_CGRCAT1A2_Mk19_usmc_d",
 "rhsusf_CGRCAT1A2_M2_usmc_d",
-"Burnes_FV4034_02",
-"Burnes_FV4034_01",
 "I_MRAP_03_hmg_F",
 "I_MRAP_03_gmg_F",
 "I_APC_tracked_03_cannon_F",
@@ -33,17 +29,20 @@ _tanks = [
 "rhsusf_m1045_d",
 "rhsusf_M1078A1R_SOV_M2_D_fmtv_socom",
 "rhsusf_M1084A1R_SOV_M2_D_fmtv_socom",
+"rhsusf_m109d_usarmy",
 "rhsusf_m113d_usarmy_supply",
 "rhsusf_m113d_usarmy",
 "rhsusf_m113d_usarmy_M240",
 "rhsusf_m113d_usarmy_medical",
 "rhsusf_m113d_usarmy_MK19",
 "rhsusf_m113d_usarmy_unarmed",
-"rhsusf_m109d_usarmy",
+"rhsusf_stryker_m1126_m2_wd",
+"rhsusf_M1117_D",
 "rhsusf_M1220_usarmy_d",
 "rhsusf_M1220_M153_M2_usarmy_d",
 "rhsusf_M1220_M2_usarmy_d",
 "rhsusf_M1220_MK19_usarmy_d",
+"rhsusf_M1220_M153_MK19_usarmy_d",
 "rhsusf_M1230_M2_usarmy_d",
 "rhsusf_M1230_MK19_usarmy_d",
 "rhsusf_M1232_usarmy_d",
@@ -51,7 +50,14 @@ _tanks = [
 "rhsusf_M1232_MK19_usarmy_d",
 "rhsusf_M1237_M2_usarmy_d",
 "rhsusf_M1237_MK19_usarmy_d",
-"rhsusf_M1117_D",
+"rhsusf_M1238A1_socom_d",
+"rhsusf_M1238A1_M2_socom_d",
+"rhsusf_M1238A1_Mk19_socom_d",
+"rhsusf_M1239_socom_d",
+"rhsusf_M1239_M2_socom_d",
+"rhsusf_M1239_M2_Deploy_socom_d",
+"rhsusf_M1239_MK19_socom_d",
+"rhsusf_M1239_MK19_Deploy_socom_d",
 "rhsusf_M142_usarmy_D",
 "rhsusf_m1a1aimd_usarmy",
 "rhsusf_m1a1aim_tuski_d",
@@ -95,17 +101,31 @@ _tanks = [
 "RHS_MK19_TriPod_D",
 "B_Mortar_01_F",
 "B_Static_Designator_01_F"
-
-
 ];
 
 _ctrl = (findDisplay 9901) displayCtrl 1500;
+_imageCtrl = (findDisplay 9901) displayCtrl 1608;
+ 
 
 _i = 0;
 {
 	_text = getText (configFile >> "CfgVehicles" >> _x >> "displayName");
 	_ctrl lbAdd _text;
-	_ctrl lbSetData [_i,_x];
+	_ctrl lbSetData [_i,_x]; 
 	_i = _i +1;
 } forEach _tanks;
+_ctrl lbSetSelected [0, true];
 
+_classname = _ctrl lbData 0;
+_picture = getText (configFile >> "CfgVehicles" >> _classname >> "editorPreview"); 
+_imageCtrl ctrlSetText _picture;
+
+
+_ctrl ctrlAddEventHandler ["LBSelChanged",{
+	params ["_control", "_selectedIndex"];
+	
+	_classname = _control lbData _selectedIndex;
+	_picture = getText (configFile >> "CfgVehicles" >> _classname >> "editorPreview"); 
+	_imageCtrl = (findDisplay 9901) displayCtrl 1608;
+	_imageCtrl ctrlSetText _picture;
+}];
