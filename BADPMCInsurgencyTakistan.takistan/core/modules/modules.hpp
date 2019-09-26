@@ -1,2 +1,0 @@
-#define cacheScript
-#define intelSpawn
