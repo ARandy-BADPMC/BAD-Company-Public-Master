@@ -1,8 +1,6 @@
 waitUntil {!isNull player && player == player};
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 
-call compileFinal preprocessfilelinenumbers "scripts\ArsenalWhitelist.sqf"; //more secure
-
 jeff addAction ["<t color='#FF0000'>Request a Task</t>", "[0] remoteExec ['CHAB_fnc_mission_selector',2]", nil, 1, false, true, "", "true", 10, false,""];
 
 
@@ -40,11 +38,13 @@ base_flag addAction ["Teleport to Shootingrange", {
 	[player,[8284.93,2118.66,0]] remoteExec ["setPos",2];
 }];
 base_flag addAction ["Teleport to Heli-Spawner", {
-	[player,[8054.63,1964.46,-3.05176e-005]] remoteExec ["setPos",2];
+	[player,[8070.84,1942.73,0]] remoteExec ["setPos",2];
 }];
+/*
 ShootingRange_flag addAction ["Teleport to Base", {
 	[player,[8267.62,2109.62,0]] remoteExec ["setPos",2];
 }];
+*/
 
 Helicopter_loadouts = 
 [

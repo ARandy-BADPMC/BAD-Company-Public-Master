@@ -37,7 +37,7 @@ class Params {
 		title="Number of INTEL items per town";
 		values[]={1,2,3,4,5,6,7,8,15};
 		texts[]={"1 - Extreme","2 - Very Hard","3 - Hard","4 - Hard\Medium","5 - Medium","6 - Medium/Easy","7 - Easy","8 - Very Easy","15 - Debug"};
-		default=3;
+		default=6;
 	};
 	class Civs {
 	//paramsArray[3]

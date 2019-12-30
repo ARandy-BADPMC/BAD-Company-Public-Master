@@ -1,5 +1,7 @@
 ["Initialize"] call BIS_fnc_dynamicGroups;
 call compileFinal preprocessfilelinenumbers "functions\heliskinapply.sqf";
+call compileFinal preprocessfilelinenumbers "scripts\ArsenalWhitelist.sqf";
+
 missionNamespace setVariable ["running_task",0];
 missionNamespace setVariable ["task_spot",[5840,5700,0]];
 
@@ -13,7 +15,7 @@ missionNamespace setVariable ["MaxAttackHelis",0,true];
 missionNamespace setVariable ["MaxTransHelis",0,true];
 missionNamespace setVariable ["MaxAPC",0,true];
 missionNamespace setVariable ["MaxStatic",0,true];
-
+defence = [defence1,defence2,defence3,defence4,defence5,defence6];
 
 _zeus_group = createGroup sideLogic;
 

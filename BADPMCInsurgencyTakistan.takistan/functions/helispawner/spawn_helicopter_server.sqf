@@ -6,6 +6,7 @@ if (_isAttack == 1) then
 	
 	{
 	_helicopter = _vehicle createVehicle (getpos heli_spawnpos);
+	_helicopter setdir (getdir heli_spawnpos);
 	createVehicleCrew _helicopter;
 	} 
 	

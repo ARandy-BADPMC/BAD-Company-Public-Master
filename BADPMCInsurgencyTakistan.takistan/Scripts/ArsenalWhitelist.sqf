@@ -1,4 +1,4 @@
-arsenalitems = 
+_arsenalitems = 
 [
 "rhs_weap_ak103_gp25_npz",
 "rhs_weap_ak103_gp25",
@@ -1275,7 +1275,6 @@ arsenalitems =
 "U_B_CombatUniform_mcam_worn",
 "U_B_T_Sniper_F",
 "U_B_GhillieSuit",
-"ItemGPS",
 "V_PlateCarrierGL_rgr",
 "V_PlateCarrierGL_blk",
 "V_HarnessOGL_brn",
@@ -2608,84 +2607,6 @@ arsenalitems =
 "rhs_weap_rpg75",
 "rhs_weap_m80",
 
-"UK3CB_BAF_L128A1",
-"UK3CB_BAF_12G_Pellets",
-"UK3CB_BAF_12G_Slugs",
-"UK3CB_BAF_L129A1",
-"UK3CB_BAF_762_L42A1_20Rnd",
-"UK3CB_BAF_762_L42A1_20Rnd_T",
-"UK3CB_BAF_L22",
-"UK3CB_BAF_556_30Rnd",
-"UK3CB_BAF_556_30Rnd_T",
-"UK3CB_BAF_L22A2",
-"UK3CB_BAF_L85A2",
-"UK3CB_BAF_L85A2_RIS_AFG",
-"UK3CB_BAF_L85A2_EMAG",
-"UK3CB_BAF_L85A2_RIS",
-"UK3CB_BAF_L85A2_RIS_Green",
-"UK3CB_BAF_L85A2_RIS_Tan",
-"UK3CB_BAF_L85A2_UGL",
-"UK3CB_BAF_L85A2_UGL_HWS",
-"UK3CB_BAF_L86A2",
-"UK3CB_BAF_L86A3",
-
-"uk3cb_baf_silencer_l85",
-"uk3cb_baf_sffh",
-"uk3cb_baf_llm_flashlight_black",
-"uk3cb_baf_llm_flashlight_tan",
-"uk3cb_baf_llm_ir_black",
-"uk3cb_baf_llm_ir_tan",
-"uk3cb_baf_kite",
-"uk3cb_baf_maxikite",
-"rksl_optic_lds",
-"rksl_optic_lds_c",
-"uk3cb_baf_specterlds",
-"rksl_optic_pmii_312",
-"rksl_optic_pmii_312_des",
-"rksl_optic_pmii_312_sunshade",
-"rksl_optic_pmii_312_sunshade_des",
-"rksl_optic_pmii_312_sunshade_wdl",
-"rksl_optic_pmii_312_wdl",
-"rksl_optic_pmii_525",
-"rksl_optic_pmii_525_des",
-"rksl_optic_pmii_525_wdl",
-"uk3cb_baf_suit",
-"uk3cb_baf_susat",
-"uk3cb_baf_ta648",
-"uk3cb_baf_ta648_308",
-
-"UK3CB_BAF_L16_Tripod",
-"UK3CB_BAF_AT4_CS_AP_Launcher",
-"UK3CB_BAF_AT4_CS_AT_Launcher",
-"UK3CB_BAF_Javelin_Slung_Tube",
-"UK3CB_BAF_L111A1",
-"UK3CB_BAF_L134A1",
-"UK3CB_BAF_L16",
-"UK3CB_BAF_M6",
-"UK3CB_BAF_NLAW_Launcher",
-"UK3CB_BAF_Tripod",
-"UK3CB_BAF_Javelin_CLU",
-
-"rhsusf_20Rnd_762x51_SR25_m118_special_Mag",
-"rhsusf_20Rnd_762x51_SR25_m62_Mag",
-"rhsusf_20Rnd_762x51_SR25_m993_Mag",
-
-"uk3cb_baf_silencer_l115a3",
-"uk3cb_underbarrel_acc_afg",
-"uk3cb_underbarrel_acc_fgrip",
-"uk3cb_underbarrel_acc_fgrip_bipod",
-"uk3cb_underbarrel_acc_grippod",
-"uk3cb_underbarrel_acc_bipod",
-
-"UK3CB_BAF_L119A1_CQB",
-"UK3CB_BAF_L115A3",
-"UK3CB_BAF_338_5Rnd",
-"UK3CB_BAF_338_5Rnd_Tracer",
-"UK3CB_BAF_L118A1_Covert_BL",
-"UK3CB_BAF_762_L42A1_10Rnd",
-"UK3CB_BAF_762_L42A1_10Rnd_T",
-"uk3cb_baf_silencer_l115a3",
-
 "alive_tablet",
 
 "hlc_rifle_416D145",
@@ -2930,8 +2851,20 @@ arsenalitems =
 "rhs_grenade_mki_mag",
 "rhs_grenade_mkii_mag",
 "rhs_grenade_m15_mag"
-
-
-
-
 ];
+
+
+_boxes = [box1,box2];
+
+{
+	[_x,_arsenalitems,true] call ace_arsenal_fnc_initBox;
+} forEach _boxes;
+
+{
+	_x addaction ["Arsenal", 
+		{
+			[_this select 0, _this select 1] call ace_arsenal_fnc_openBox;
+		},nil,0,true,false,"","",10];
+} forEach _boxes;
+
+_arsenalitems = nil;
