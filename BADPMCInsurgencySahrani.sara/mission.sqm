@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2619;
+		nextID=2623;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=86;
+		nextID=100;
 	};
 	class Camera
 	{
-		pos[]={19231.799,19.753405,13899.345};
-		dir[]={-0.68649787,-0.54850578,-0.4773576};
-		up[]={-0.45037112,0.83611709,-0.31316552};
-		aside[]={-0.57090086,8.8024535e-008,0.82102561};
+		pos[]={19269.6,47.318916,13923.526};
+		dir[]={-0.64540607,-0.68918771,-0.32939151};
+		up[]={-0.61389643,0.72454166,-0.31330961};
+		aside[]={-0.45458883,2.225861e-007,0.89071649};
 	};
 };
 binarizationWanted=0;
@@ -56,7 +56,7 @@ addons[]=
 	"A3_Structures_F_Mil_Helipads",
 	"A3_Structures_F_Civ_Lamps",
 	"A3_Structures_F_Mil_Cargo",
-	"ace_medical",
+	"ace_medical_treatment",
 	"A3_Structures_F_Mil_Fortification",
 	"A3_Structures_F_Walls",
 	"A3_Signs_F",
@@ -103,6 +103,7 @@ addons[]=
 	"rhsusf_c_weapons",
 	"SFG_Tac_Beard",
 	"A3_Weapons_F_Items",
+	"ace_medical_engine",
 	"CUP_CAStructures_Mil",
 	"A3_Structures_F_Naval_Piers",
 	"rhsusf_c_markvsoc",
@@ -164,7 +165,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=71;
+		items=72;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -279,8 +280,8 @@ class AddonsMetaData
 		};
 		class Item16
 		{
-			className="ace_medical";
-			name="ACE3 - Medical";
+			className="ace_medical_treatment";
+			name="ACE3 - Medical Treatment";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
@@ -502,141 +503,148 @@ class AddonsMetaData
 		};
 		class Item50
 		{
+			className="ace_medical_engine";
+			name="ACE3 - Medical Engine";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item51
+		{
 			className="CUP_CAStructures_Mil";
 			name="CUP_CAStructures_Mil";
 		};
-		class Item51
+		class Item52
 		{
 			className="rhsusf_c_markvsoc";
 			name="Mark V SOC";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item52
+		class Item53
 		{
 			className="A3_Boat_F";
 			name="Arma 3 Alpha - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item53
+		class Item54
 		{
 			className="A3_Structures_F_Enoch_Military";
 			name="Arma 3 Enoch - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item54
+		class Item55
 		{
 			className="A3_Structures_F_Tank";
 			name="Arma 3 Tank - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item55
+		class Item56
 		{
 			className="acex_field_rations";
 			name="ACEX - Field Rations";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item56
+		class Item57
 		{
 			className="A3_Props_F_Enoch";
 			name="Arma 3 Enoch - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item57
+		class Item58
 		{
 			className="A3_Structures_F_Exp_Infrastructure";
 			name="Arma 3 Apex - Infrastructure Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item58
+		class Item59
 		{
 			className="CUP_CAStructures_E_Misc_Misc_Market";
 			name="CUP_CAStructures_E_Misc_Misc_Market";
 		};
-		class Item59
+		class Item60
 		{
 			className="A3_Structures_F_EPB";
 			name="Arma 3 Adapt Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item60
+		class Item61
 		{
 			className="ace_interaction";
 			name="ACE3 - Interaction";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item61
+		class Item62
 		{
 			className="A3_Structures_F_Households";
 			name="Arma 3 - Houses";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item62
+		class Item63
 		{
 			className="A3_Structures_F_Exp_Industrial";
 			name="Arma 3 Apex - Industrial Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item63
+		class Item64
 		{
 			className="A3_Structures_F_Exp_Commercial";
 			name="Arma 3 Apex - Commercial Buildings";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item64
+		class Item65
 		{
 			className="A3_Props_F_Exp";
 			name="Arma 3 Apex - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item65
+		class Item66
 		{
 			className="A3_Structures_F_Kart";
 			name="Arma 3 Karts - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item66
+		class Item67
 		{
 			className="A3_Structures_F_Bootcamp";
 			name="Arma 3 Bootcamp Update - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item67
+		class Item68
 		{
 			className="ace_logistics_wirecutter";
 			name="ACE3 - Logistics Wire Cutter";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item68
+		class Item69
 		{
 			className="ace_concertina_wire";
 			name="ACE3 - Concertina Wire";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item69
+		class Item70
 		{
 			className="A3_Structures_F_Wrecks";
 			name="Arma 3 - Vehicle Wrecks";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item70
+		class Item71
 		{
 			className="A3_Static_F";
 			name="Arma 3 Alpha - Turrets";
@@ -663,7 +671,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -751,7 +759,7 @@ class CustomAttributes
 		};
 		nAttributes=2;
 	};
-	class Category1
+	class Category2
 	{
 		name="Scenario";
 		class Attribute0
@@ -18981,19 +18989,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={19295.197,12.877966,13792.685};
-				angles[]={0.0038909637,5.3179917,6.2603607};
+				position[]={19295.197,12.878436,13792.685};
+				angles[]={0.0038920844,5.3179832,6.2603559};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="call{ box4 addaction [""Arsenal"", {disableUserInput true; [box4 ,arsenalitems] call ace_arsenal_fnc_addVirtualitems; [box4, player] call ace_arsenal_fnc_openBox; disableUserInput false; " \n "},nil,0,true,false,"""","""",10];  " \n "}";
 				name="box4";
 			};
 			id=177;
 			type="CargoNet_01_box_F";
-			atlOffset=0.070529938;
+			atlOffset=0.071000099;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -19030,7 +19037,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -23702,7 +23709,7 @@ class Mission
 				class Attribute0
 				{
 					property="ace_isMedicalVehicle";
-					expression="_this setVariable [""ace_medical_medicClass"",_value,true];";
+					expression="_this setVariable [""ace_medical_isMedicalVehicle"",_value,true]";
 					class Value
 					{
 						class data
@@ -28432,7 +28439,7 @@ class Mission
 				class Attribute0
 				{
 					property="ace_isMedicalVehicle";
-					expression="_this setVariable [""ace_medical_medicClass"",_value,true];";
+					expression="_this setVariable [""ace_medical_isMedicalVehicle"",_value,true]";
 					class Value
 					{
 						class data
@@ -28614,7 +28621,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
 							class Value
 							{
 								class data
@@ -28840,7 +28847,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
 							class Value
 							{
 								class data
@@ -29066,7 +29073,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
 							class Value
 							{
 								class data
@@ -29292,7 +29299,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
 							class Value
 							{
 								class data
@@ -29518,7 +29525,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
 							class Value
 							{
 								class data
@@ -29744,7 +29751,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isMedic";
-							expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
 							class Value
 							{
 								class data
@@ -31556,7 +31563,7 @@ class Mission
 				class Attribute0
 				{
 					property="ace_isMedicalVehicle";
-					expression="_this setVariable [""ace_medical_medicClass"",_value,true];";
+					expression="_this setVariable [""ace_medical_isMedicalVehicle"",_value,true]";
 					class Value
 					{
 						class data

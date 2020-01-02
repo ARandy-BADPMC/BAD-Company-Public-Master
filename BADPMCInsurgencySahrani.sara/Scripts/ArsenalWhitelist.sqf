@@ -2852,11 +2852,12 @@ _arsenalitems =
 "rhs_grenade_mkii_mag",
 "rhs_grenade_m15_mag",
 "ace_dragon_super",
-"ace_dragon_sight"
+"ace_dragon_sight",
+"ACE_splint"
 ];
 
 
-_boxes = [box1,box2];
+_boxes = [box1,box2,box4];
 
 {
 	[_x,_arsenalitems,true] call ace_arsenal_fnc_initBox;
