@@ -48,6 +48,10 @@ ShootingRange_flag addAction ["Teleport to Base", {
 fob_flag addAction ["Teleport to Base", {
 	[player,[19218.6,13883.4,0.080492]] remoteExec ["setPos",2];
 }];
+_boxes = [box1,box2];
+{_x addaction ["Arsenal", 
+	{[_this select 0, _this select 1] call ace_arsenal_fnc_openBox;},nil,0,true,false,"","",10];
+} forEach _boxes;
 
 Helicopter_loadouts = 
 [

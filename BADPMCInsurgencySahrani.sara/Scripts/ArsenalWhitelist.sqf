@@ -2862,11 +2862,4 @@ _boxes = [box1,box2];
 	[_x,_arsenalitems,true] call ace_arsenal_fnc_initBox;
 } forEach _boxes;
 
-{
-	_x addaction ["Arsenal", 
-		{
-			[_this select 0, _this select 1] call ace_arsenal_fnc_openBox;
-		},nil,0,true,false,"","",10];
-} forEach _boxes;
-
 _arsenalitems = nil;
