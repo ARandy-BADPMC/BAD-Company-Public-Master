@@ -2850,7 +2850,9 @@ _arsenalitems =
 "ACRE_VHF30108SPIKE",
 "rhs_grenade_mki_mag",
 "rhs_grenade_mkii_mag",
-"rhs_grenade_m15_mag"
+"rhs_grenade_m15_mag",
+"ace_dragon_super",
+"ace_dragon_sight"
 ];
 
 
