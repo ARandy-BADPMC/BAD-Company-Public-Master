@@ -2853,7 +2853,16 @@ _arsenalitems =
 "rhs_grenade_m15_mag",
 "ace_dragon_super",
 "ace_dragon_sight",
-"ACE_splint"
+"ACE_splint",
+"rhsusf_20Rnd_762x51_SR25_m118_special_Mag",
+"rhsusf_20Rnd_762x51_SR25_m62_Mag",
+"rhsusf_20Rnd_762x51_SR25_m993_Mag",
+"rhsusf_20Rnd_762x51_SR25_mk316_special_Mag",
+"rhs_acc_okp7_dovetail",
+"rhs_acc_okp7_picatinny",
+"ACRE_SEM52SL",
+"ACRE_SEM70",
+"MiniGrenade"
 ];
 
 
