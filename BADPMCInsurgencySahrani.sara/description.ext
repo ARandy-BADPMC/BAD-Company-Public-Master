@@ -1,4 +1,4 @@
-respawnTemplates[]= "MenuPosition"};
+respawnTemplates[]= {"MenuPosition"};
 	
 respawn= 3;										// NONE. BIRD. INSTANT. BASE. GROUP. SIDE.	
 respawnOnStart = -1;										// 1 to respawn player when he joins the game. Available only for INSTANT and BASE respawn types.	
