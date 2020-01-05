@@ -105,87 +105,81 @@ class Params {
 		texts[]={"1","2,4","4,8","8,12","12,16","16,20"};
 		default=1;
 	};
-	class housegroupprobability {
-	//paramsArray [12];
-		title="Probability of garrison spawn";
-		values[]={0,10,20,25,30,40,50,60,70,75,80,90,100};
-		default=100;
-	};
 	class patrolgroups {
-	//paramsArray [13]
+	//paramsArray [12]
 		title="Amount of patrols";
 		values[]={0,1,2,3,4,5};
 		default=1;
 	};
 	class patrolgroupsize {
-	//paramsArray [14]
+	//paramsArray [13]
 		title="Patrol size";
 		values[]={0,1,2,3,4,5};
 		texts[]={"1","2,4","4,8","8,12","12,16","16,20"};
 		default=2;
 	};	
 	class patrolprobability {
-	//paramsArray [15];
+	//paramsArray [14];
 		title="Probability of patrol spawn";
 		values[]={0,10,20,25,30,40,50,60,70,75,80,90,100};
 		default=50;
 	};
 	class armourgroups {
-	//paramsArray [16]
+	//paramsArray [15]
 		title="Amount of armour";
 		values[]={0,1,2,3,4,5};
 		default=1;
 	};
 	class armourprobability {
-	//paramsArray [17];
+	//paramsArray [16];
 		title="Probability of armour spawn";
 		values[]={0,10,20,25,30,40,50,60,70,75,80,90,100};
 		default=25;
 	};
 	class staticsvehicles {
-	//paramsArray [18]
+	//paramsArray [17]
 		title="Amount of statics";
 		values[]={0,1,2,3,4,5};
 		default=1;
 	};
 	class staticprobability {
-	//paramsArray [19];
+	//paramsArray [18];
 		title="Probability of static spawn";
 		values[]={0,10,20,25,30,40,50,60,70,75,80,90,100};
 		default=20;
 	};
 	class heligroups {
-	//paramsArray [20]
+	//paramsArray [19]
 		title="Amount of helis";
 		values[]={0,1,2,3,4,5};
 		default=1;
 	};
 	class heliprobability {
-	//paramsArray [21];
+	//paramsArray [20];
 		title="Probability of heli spawn";
 		values[]={0,10,20,25,30,40,50,60,70,75,80,90,100};
 		default=60;
 	};
 	class infispawndistance {
-	//paramsArray [22];
+	//paramsArray [21];
 		title="Distance at which infantry will spawn";
 		values[]={100,200,300,400,500,600,700,800,900,1000};
 		default=700;
 	};
 	class vehiclespawndistance {
-	//paramsArray [23];
+	//paramsArray [22];
 		title="Distance at which vehicles will spawn";
 		values[]={100,200,300,400,500,600,700,800,900,1000};
 		default=400;
 	};
 	class helispawndistance {
-	//paramsArray [24];
+	//paramsArray [23];
 		title="Distance at which helicopters will spawn";
 		values[]={100,200,300,400,500,600,700,800,900,1000};
 		default=1000;
 	};
 	class iedcountonmap {
-	//paramsArray [25];
+	//paramsArray [24];
 		title="Amount of ieds on map";
 		values[]={0,10,20,40,60};
 		texts[]={"None","Low","Medium","High","Very High"};
@@ -198,11 +192,9 @@ class Params {
 class CfgFunctions 
 {
 	#include "CHVD\CfgFunctions.hpp"
-	#include "LARs\LARs_spawnComp.cpp"
 	#include "CfgFunctions.hpp"
 	#include "vcom\cfgFunctions.hpp"
 };
-#include "compositions\compositions.cfg"
 #include "functions\defines.hpp"
 #include "functions\dialogs.hpp"
 

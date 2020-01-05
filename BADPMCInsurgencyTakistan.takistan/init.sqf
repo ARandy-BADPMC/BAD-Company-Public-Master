@@ -20,8 +20,6 @@ execVM"Scripts\ied.sqf";
 
 null=[]execVM "eos\OpenMe.sqf";
 
-null=[]execVM "cos\cosInit.sqf";
-
 #include "core\modules\cacheScript\fn\fn.sqf"
 #include "core\modules\cacheScript\fn\cacheFn.sqf"
 #include "core\modules\cacheScript\fn\KRON_Str.sqf"
