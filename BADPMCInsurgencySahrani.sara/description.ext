@@ -92,98 +92,105 @@ class Params {
 		texts[]={"On (Default)","Off"};
 		default=1;
 	};
+	class enemytype {
+	//paramsArray [10];
+		title="Type of enemy";
+		values[]={5,6,7};
+		texts[]={"Russia (RHS)","Tanoa Liberation Force (RHS)","Militia (Project Opfor)"};
+		default=7;
+	};
 	class housegroups {
-	//paramsArray [10]
+	//paramsArray [11]
 		title="Amount of garrisons";
 		values[]={0,1,2,3,4,5};
 		default=2;
 	};
 	class housegroupsize {
-	//paramsArray [11]
+	//paramsArray [12]
 		title="Garrison size";
 		values[]={0,1,2,3,4,5};
 		texts[]={"1","2,4","4,8","8,12","12,16","16,20"};
 		default=1;
 	};
 	class patrolgroups {
-	//paramsArray [12]
+	//paramsArray [13]
 		title="Amount of patrols";
 		values[]={0,1,2,3,4,5};
 		default=2;
 	};
 	class patrolgroupsize {
-	//paramsArray [13]
+	//paramsArray [14]
 		title="Patrol size";
 		values[]={0,1,2,3,4,5};
 		texts[]={"1","2,4","4,8","8,12","12,16","16,20"};
 		default=1;
 	};	
 	class patrolprobability {
-	//paramsArray [14];
+	//paramsArray [15];
 		title="Probability of patrol spawn";
 		values[]={0,10,20,25,30,40,50,60,70,75,80,90,100};
 		default=60;
 	};
 	class armourgroups {
-	//paramsArray [15]
+	//paramsArray [16]
 		title="Amount of armour";
 		values[]={0,1,2,3,4,5};
 		default=1;
 	};
 	class armourprobability {
-	//paramsArray [16];
+	//paramsArray [17];
 		title="Probability of armour spawn";
 		values[]={0,10,20,25,30,40,50,60,70,75,80,90,100};
 		default=25;
 	};
 	class staticsvehicles {
-	//paramsArray [17]
+	//paramsArray [18]
 		title="Amount of statics";
 		values[]={0,1,2,3,4,5};
 		default=1;
 	};
 	class staticprobability {
-	//paramsArray [18];
+	//paramsArray [19];
 		title="Probability of static spawn";
 		values[]={0,10,20,25,30,40,50,60,70,75,80,90,100};
 		default=20;
 	};
 	class heligroups {
-	//paramsArray [19]
+	//paramsArray [20]
 		title="Amount of helis";
 		values[]={0,1,2,3,4,5};
 		default=1;
 	};
 	class heliprobability {
-	//paramsArray [20];
+	//paramsArray [21];
 		title="Probability of heli spawn";
 		values[]={0,10,20,25,30,40,50,60,70,75,80,90,100};
 		default=60;
 	};
 	class infispawndistance {
-	//paramsArray [21];
+	//paramsArray [22];
 		title="Distance at which infantry will spawn";
 		values[]={100,200,300,400,500,600,700,800,900,1000};
 		default=700;
 	};
 	class vehiclespawndistance {
-	//paramsArray [22];
+	//paramsArray [23];
 		title="Distance at which vehicles will spawn";
 		values[]={100,200,300,400,500,600,700,800,900,1000};
 		default=400;
 	};
 	class helispawndistance {
-	//paramsArray [23];
+	//paramsArray [24];
 		title="Distance at which helicopters will spawn";
 		values[]={100,200,300,400,500,600,700,800,900,1000};
 		default=1000;
 	};
 	class iedcountonmap {
-	//paramsArray [24];
+	//paramsArray [25];
 		title="Amount of ieds on map";
 		values[]={0,10,20,40,60};
 		texts[]={"None","Low","Medium","High","Very High"};
-		default=20;
+		default=10;
 	};
 };
 

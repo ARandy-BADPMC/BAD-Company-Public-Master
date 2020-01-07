@@ -102,19 +102,19 @@ _tempArray=[];
 	_crewPool=	["rhsgref_tla_crew"];
 	_heliCrew=	["rhsgref_tla_crew"];};
 	
-// ADD CLASSNAMES 	
+// Project Opfor Militia 	
 	if (_faction==7) then {
-	_InfPool=	[];	
-	_ArmPool=	[];
-	_MotPool=	[];
-	_ACHPool=	[];
-	_CHPool=	[];
+	_InfPool=	["LOP_AM_Infantry_Engineer","LOP_AM_Infantry_Corpsman","LOP_AM_Infantry_GL","LOP_AM_Infantry_Rifleman_6","LOP_AM_Infantry_Rifleman","LOP_AM_Infantry_Rifleman_4","LOP_AM_Infantry_Rifleman_5","LOP_AM_Infantry_Rifleman_7","LOP_AM_Infantry_Rifleman_8","LOP_AM_Infantry_AR_Asst","LOP_AM_Infantry_AR","LOP_AM_Infantry_AT","LOP_AM_Infantry_Marksman","LOP_AM_Infantry_Rifleman_9","LOP_AM_Infantry_SL","LOP_TKA_Infantry_GL","LOP_TKA_Infantry_Officer","LOP_TKA_Infantry_Marksman"];	
+	_ArmPool=	["LOP_AM_BTR60"];
+	_MotPool=	["LOP_AM_Truck","LOP_AM_UAZ_SPG","LOP_AM_UAZ_DshKM","LOP_AM_UAZ_AGS","LOP_AM_Offroad_M2","LOP_AM_Nissan_PKM","LOP_AM_Landrover_SPG9","LOP_AM_Landrover_M2","LOP_AM_BM21"];
+	_ACHPool=	["LOP_TKA_Mi24V_AT","LOP_TKA_Mi24V_FAB"];
+	_CHPool=	["LOP_TKA_Mi8MTV3_FAB"];
 	_uavPool=	[];
-	_stPool=	[];
+	_stPool=	["LOP_AM_Static_ZU23","LOP_AM_Static_SPG9","LOP_AM_NSV_TriPod","LOP_AM_Static_M2","LOP_AM_Kord_High","LOP_AM_Kord","LOP_AM_Kord","LOP_AM_Kord","LOP_AM_Static_DSHKM","LOP_AM_AGS30_TriPod","LOP_AM_Igla_AA_pod","LOP_AM_Static_AT4"];
 	_shipPool=	[];
 	_diverPool=	[];
-	_crewPool=	[];
-	_heliCrew=	[];};
+	_crewPool=	["LOP_AM_Infantry_Engineer"];
+	_heliCrew=	["LOP_TKA_Infantry_GL"];};
 	
 ////////////////////////////////////////////////////////////////////////////////////////
 if (_type==0) then {
