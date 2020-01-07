@@ -51,7 +51,7 @@ class Params {
 		title="Time";
 		texts[]={"Dawn","Morning (Default)","Noon","Afternoon","Evening","Night"};
 		values[]={5,8,12,14,18,0};
-		default=14;
+		default=8;
 		function="BIS_fnc_paramDaytime";
  		isGlobal=0;
 	};
@@ -185,6 +185,14 @@ class Params {
 		texts[]={"None","Low","Medium","High","Very High"};
 		default=40;
 	};
+	class enemytype {
+	//paramsArray [25];
+		title="Type of enemy";
+		values[]={0,1,2,4,5,6};
+		texts[]={"CSAT (Vanilla)","NATO (Vanilla)","AAF (Vanilla)","FIA (Vanilla)","Russia (RHS)","Militia (Project Opfor)"};
+		default=6;
+	};
+
 };
 
 

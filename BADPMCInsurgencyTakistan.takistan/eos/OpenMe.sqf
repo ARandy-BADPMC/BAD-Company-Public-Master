@@ -32,7 +32,7 @@ _markerArray pushBack (format ["mkr%1",_i]);
 
 };
 
-[_markerArray,[paramsArray select 10,paramsArray select 11],[paramsArray select 12,paramsArray select 13,paramsArray select 14],[0,0],[0,0],[0,0],[0,0],[5,2,paramsArray select 21,EAST,TRUE,FALSE]] call EOS_Spawn;
+[_markerArray,[paramsArray select 10,paramsArray select 11],[paramsArray select 12,paramsArray select 13,paramsArray select 14],[0,0],[0,0],[0,0],[0,0],[paramsArray select 25,2,paramsArray select 21,EAST,TRUE,FALSE]] call EOS_Spawn;
 
 //Vehicles
 
@@ -44,7 +44,7 @@ _markerArray pushBack (format ["mkr%1",_i]);
 
 };
 
-[_markerArray,[0,0],[paramsArray select 12,paramsArray select 13,paramsArray select 14],[1,0,50],[paramsArray select 15,paramsArray select 16],[paramsarray select 17,paramsArray select 18],[0,0],[5,2,paramsArray select 22,EAST,TRUE,FALSE]] call EOS_Spawn;
+[_markerArray,[0,0],[paramsArray select 12,paramsArray select 13,paramsArray select 14],[1,0,50],[paramsArray select 15,paramsArray select 16],[paramsarray select 17,paramsArray select 18],[0,0],[paramsArray select 25,2,paramsArray select 22,EAST,TRUE,FALSE]] call EOS_Spawn;
 
 //Choppers
 
@@ -56,7 +56,7 @@ _markerArray pushBack (format ["mkr%1",_i]);
 
 };
 
-[_markerArray,[0,0],[paramsArray select 12,paramsArray select 13,paramsArray select 14],[0,0,0],[paramsArray select 15,paramsArray select 16],[0],[paramsArray select 19,0,paramsArray select 20],[5,2,paramsArray select 23,EAST,TRUE,FALSE]] call EOS_Spawn;
+[_markerArray,[0,0],[paramsArray select 12,paramsArray select 13,paramsArray select 14],[0,0,0],[paramsArray select 15,paramsArray select 16],[0],[paramsArray select 19,0,paramsArray select 20],[paramsArray select 25,2,paramsArray select 23,EAST,TRUE,FALSE]] call EOS_Spawn;
 
 //Bastions
 
@@ -68,4 +68,4 @@ _markerArray pushBack (format ["mkr%1",_i]);
 
 };
 
-[_markerArray,[3,1],[1,0],[0],[1,5],[5,0,EAST,false,false],[10,2,60,TRUE,FALSE]] call Bastion_Spawn;
+[_markerArray,[3,1],[1,0],[0],[1,5],[paramsArray select 25,0,EAST,false,false],[10,2,60,TRUE,FALSE]] call Bastion_Spawn;

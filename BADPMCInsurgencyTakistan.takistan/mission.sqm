@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=5;
 	class ItemIDProvider
 	{
-		nextID=1971;
+		nextID=2070;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7993.8481,256.52747,11192.528};
-		dir[]={-0.1291368,-0.8192392,0.55879545};
-		up[]={-0.18446159,0.57345909,0.7981962};
-		aside[]={0.97436041,-7.1688555e-007,0.22517312};
+		pos[]={2785.0244,434.05414,-2011.9044};
+		dir[]={0.57572162,-0.10175683,-0.81135559};
+		up[]={0.058905173,0.99480075,-0.083013058};
+		aside[]={-0.81558818,-6.0535967e-008,-0.57872254};
 	};
 };
 binarizationWanted=0;
@@ -25294,7 +25294,7 @@ class Mission
 		class Item174
 		{
 			dataType="Marker";
-			position[]={8000,317.5,2850};
+			position[]={8300.125,342.1568,3150};
 			name="mkr35";
 			markerType="RECTANGLE";
 			type="rectangle";
@@ -28092,13 +28092,14 @@ class Mission
 		class Item426
 		{
 			dataType="Marker";
-			position[]={8300,342.14999,3150};
+			position[]={3250,389.99561,900};
 			name="mkr296";
 			markerType="RECTANGLE";
 			type="rectangle";
-			a=100;
-			b=50;
+			a=50;
+			b=100;
 			id=1082;
+			atlOffset=-0.61437988;
 		};
 		class Item427
 		{
@@ -34295,13 +34296,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={8271.7666,296.04144,2114.2615};
+						position[]={8271.7666,296.04144,2114.261};
 						angles[]={0,2.4819803,0};
 					};
 					side="West";
 					flags=6;
 					class Attributes
 					{
+						isPlayer=1;
 						isPlayable=1;
 					};
 					id=1665;
