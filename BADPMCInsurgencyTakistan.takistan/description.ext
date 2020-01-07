@@ -135,13 +135,13 @@ class Params {
 	//paramsArray [16]
 		title="Amount of armour";
 		values[]={0,1,2,3,4,5};
-		default=1;
+		default=2;
 	};
 	class armourprobability {
 	//paramsArray [17];
 		title="Probability of armour spawn";
 		values[]={0,10,20,25,30,40,50,60,70,75,80,90,100};
-		default=25;
+		default=50;
 	};
 	class staticsvehicles {
 	//paramsArray [18]
@@ -190,7 +190,7 @@ class Params {
 		title="Amount of ieds on map";
 		values[]={0,10,20,40,60};
 		texts[]={"None","Low","Medium","High","Very High"};
-		default=40;
+		default=20;
 	};
 
 };
