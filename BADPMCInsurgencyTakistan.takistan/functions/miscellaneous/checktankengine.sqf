@@ -1,7 +1,9 @@
 _vehicle = _this select 0;
 _pilot = driver _vehicle;
+_tempArray = _pilot getVariable "vehiceRestrictions";
 
-if ((typeOf _pilot != "rhsusf_socom_marsoc_cso_mechanic") || isNull _pilot)
-then {
+
+if ("Armor" in _tempArray) then
+{
 _vehicle engineOn false; 
 };

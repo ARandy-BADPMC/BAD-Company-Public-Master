@@ -16,7 +16,7 @@ if (_isAttack == 1) then
 	_helicopter = _vehicle createVehicle (getpos heli_spawnpos);
 	};
 	
-	[_helicopter] call skinapplier;
+	[_helicopter] call CHAB_fnc_HeliSkinApplyNew;
 	_helicopter setdir (getdir heli_spawnpos);
 	_pylonPaths = (configProperties [configFile >> "CfgVehicles" >> typeOf _helicopter >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"]) apply {getArray (_x >> "turret")};
 	{ _helicopter removeWeaponGlobal getText (configFile >> "CfgMagazines" >> _x >> "pylonWeapon") } forEach getPylonMagazines _helicopter;
@@ -33,7 +33,7 @@ if (_isAttack == 1) then
 } else 
 {
 	_helicopter = _vehicle createVehicle (getpos heli_spawnpos);
-	[_helicopter] call skinapplier;
+	[_helicopter] call CHAB_fnc_HeliSkinApplyNew;
 	_helicopter setdir (getdir heli_spawnpos);
 	_helicopter addMPEventHandler ["MPKilled",
 	{

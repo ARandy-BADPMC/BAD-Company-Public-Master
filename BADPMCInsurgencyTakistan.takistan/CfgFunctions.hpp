@@ -44,6 +44,10 @@ class chainbreaker
 		{
 			file = "functions\miscellaneous\checktankengine.sqf";
 		};
+		class vehicleAbilities
+		{
+			file = "functions\miscellaneous\vehicleAbilities.sqf";
+		};
 	};
 	class admin_menu
 	{
@@ -168,6 +172,10 @@ class chainbreaker
 		class spawn_helicopter_server
 		{
 			file = "functions\helispawner\spawn_helicopter_server.sqf";
+		};
+		class HeliSkinApplyNew
+		{
+			file = "functions\HeliSkinApplyNew.sqf";
 		};
 	};
 	class player_required

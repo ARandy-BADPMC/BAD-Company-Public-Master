@@ -1,9 +1,11 @@
 _vehicle = _this select 0;
 _seat = _this select 1;
 _player = _this select 2;
+_tempArray = _player getVariable "vehiceRestrictions";
+
 if(_seat == "driver") then 
 {
-  if (typeOf _player != "rhsusf_socom_marsoc_cso_mechanic")
+  if ("Armor" in _tempArray)
     then
     {
       moveOut _player;

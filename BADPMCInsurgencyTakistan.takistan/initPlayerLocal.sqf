@@ -1,25 +1,31 @@
 waitUntil {!isNull player && player == player};
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
+_playerUid = getPlayerUID;
 
+_whitelist = ["76561198142692277","76561198117073327","76561198086630094","76561198059583284","76561198080263934","76561198027293421","76561198067590754"];//76561198080263934 -Geo2013 , 76561198142692277 -Alex. K., 76561198086630094 -G.Drunken, 76561198027293421- S.Werben, 76561198117073327 - A.Randy,   76561198059583284 - Vittex?, 76561198067590754 - Mas Pater
 
 switch (typeOf player) do { 
-	case "rhsusf_airforce_jetpilot" : {  player call CHAB_fnc_whitelist; }; 
-	case "rhsusf_army_ocp_helipilot" : {  
+	case "rhsusf_army_ocp_helipilot" : { 
+		_temparray pushback "Transport";
 		heli_jeff addAction ["<t color='#FF0000'>Aircraft Spawner</t>","[] spawn CHAB_fnc_spawn_heli;",nil, 1, false, true, "", "true", 10, false,""];   //HELISPAWNER
 		heli_jeff addAction ["<t color='#FF0000'>I want my Aircraft removed!</t>","[] spawn CHAB_fnc_remover_heli;",nil, 1, false, true, "", "true", 10, false,""];   //HELISPAWNER
 	}; 
 	default {
-	 	tank_spawner addAction ["<t color='#FF0000'>Armor Spawner</t>","[] spawn CHAB_fnc_spawn_tank;",nil, 1, false, true, "", "true", 10, false,""];   
+		tank_spawner addAction ["<t color='#FF0000'>Armor Spawner</t>","[] spawn CHAB_fnc_spawn_tank;",nil, 1, false, true, "", "true", 10, false,""];   
 		tank_spawner addAction ["<t color='#FF0000'>I want my vehicle removed!</t>","[] spawn CHAB_fnc_remover_tank;",nil, 1, false, true, "", "true", 10, false,""];   
 	}; 
 };
+
 _admins = ["76561198117073327","76561198142692277","76561198017258138","76561198002110130","76561197998271838","76561197992821044","76561197988793826","76561198048254349","76561198088658039"]; //76561197998271838-GOMEZ 76561197992821044-GRAND 76561197988793826-WEEDO  76561198117073327-Randy  76561198142692277-Alex.K   76561198017258138 - A.Mitchell 76561198002110130 K.Hunter 76561198088658039 Ayoub
 if(getPlayerUID player in _admins) 
 	then 
 	{
 		player addAction ["<t color='#FF0000'>Admin Console</t>","[] spawn CHAB_fnc_adminconsole;",nil, 1, false, true, "", "true", 10, false,""];
-	
+		_admin = true;
 	};
+	
+[player,_playerUid, _admin,_whitelist] call CHAB_fnc_vehicleAbilities;
+
 
 jeff addaction ["Lights on", {
 	_lamp = [12068,12595.7,0] nearestObject "Land_LampAirport_F";
@@ -45,11 +51,6 @@ base_flag addAction ["Teleport to FOB", {
 fob_flag addAction ["Teleport to Base", {
 	[player,[8267.67,2109.82,0]] remoteExec ["setPos",2];
 }];
-/*
-ShootingRange_flag addAction ["Teleport to Base", {
-	[player,[8267.67,2109.82,0]] remoteExec ["setPos",2];
-}];
-*/
 _boxes = [box1,box2,box3,box4];
 {_x addaction ["Arsenal", 
 	{[_this select 0, _this select 1] call ace_arsenal_fnc_openBox;},nil,0,true,false,"","",10];
