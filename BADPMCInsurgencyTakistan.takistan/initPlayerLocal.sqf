@@ -3,9 +3,6 @@ waitUntil {!isNull player && player == player};
 _playerUid = getPlayerUID;
 
 _whitelist = ["76561198142692277","76561198117073327","76561198086630094","76561198059583284","76561198080263934","76561198027293421","76561198067590754"];//76561198080263934 -Geo2013 , 76561198142692277 -Alex. K., 76561198086630094 -G.Drunken, 76561198027293421- S.Werben, 76561198117073327 - A.Randy,   76561198059583284 - Vittex?, 76561198067590754 - Mas Pater
-_unrestricted = ["76561198142692277","76561198117073327","76561198048254349"];
-[player,_playerUid, _unrestricted,_whitelist] call CHAB_fnc_vehicleAbilities;
-
 
 switch (typeOf player) do { 
 	case "rhsusf_army_ocp_helipilot" : { 
@@ -24,7 +21,11 @@ if(getPlayerUID player in _admins)
 	then 
 	{
 		player addAction ["<t color='#FF0000'>Admin Console</t>","[] spawn CHAB_fnc_adminconsole;",nil, 1, false, true, "", "true", 10, false,""];
+		_admin = true;
 	};
+	
+[player,_playerUid, _admin,_whitelist] call CHAB_fnc_vehicleAbilities;
+
 
 jeff addaction ["Lights on", {
 	_lamp = [12068,12595.7,0] nearestObject "Land_LampAirport_F";

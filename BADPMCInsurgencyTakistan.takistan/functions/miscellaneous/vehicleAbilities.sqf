@@ -1,10 +1,10 @@
 _player = _this select 0;
 _playerUid = _this select 1;
-_unrestricted = _this select 2;
+_admin = _this select 2;
 _whitelist = _this select 3;
 _tempArray = ["Attack","Transport","Armor"];
 
-if (_playerUid in _unrestricted) then 
+if (_admin) then 
 	{
 	_tempArray = [];
 	}
