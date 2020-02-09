@@ -12,7 +12,7 @@ if (_isAttack == 1) then
 		missionNamespace setVariable ["MaxTanks",_maxtanks -1,true];
 	}];
 	
-	[_helicopter] call CHAB_fnc_HeliSkinApplyNew;
+	[_helicopter] call skinapplier;
 	[_helicopter] remoteExec ["CHAB_fnc_tank_restriction",0,true];
 
 } else {if (_vehicle in _staticType) then 
@@ -39,6 +39,6 @@ if (_isAttack == 1) then
 		_current_helis = _current_helis -1;
 		missionNamespace setVariable ["MaxAPC",_current_helis,true];
 	}];
-	[_helicopter] call CHAB_fnc_HeliSkinApplyNew;
+	[_helicopter] call skinapplier;
 };
 };
