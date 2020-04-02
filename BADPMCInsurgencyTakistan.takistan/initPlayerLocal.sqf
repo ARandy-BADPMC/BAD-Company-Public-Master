@@ -33,7 +33,7 @@ jeff addaction ["Lights off", {
 }];
 
 base_flag addAction ["Teleport to Shootingrange", {
-	[player,[8284.93,2118.66,0]] remoteExec ["setPos",2];
+	[player,[8001.61,1989.11,0]] remoteExec ["setPos",2];
 
 }];
 base_flag addAction ["Teleport to Heli-Spawner", {
@@ -45,11 +45,10 @@ base_flag addAction ["Teleport to FOB", {
 fob_flag addAction ["Teleport to Base", {
 	[player,[8267.67,2109.82,0]] remoteExec ["setPos",2];
 }];
-/*
 ShootingRange_flag addAction ["Teleport to Base", {
 	[player,[8267.67,2109.82,0]] remoteExec ["setPos",2];
 }];
-*/
+
 _boxes = [box1,box2,box3,box4];
 {_x addaction ["Arsenal", 
 	{[_this select 0, _this select 1] call ace_arsenal_fnc_openBox;},nil,0,true,false,"","",10];
