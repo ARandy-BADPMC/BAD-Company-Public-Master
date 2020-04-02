@@ -60,7 +60,6 @@ Helicopter_loadouts =
 [
 	"RHS_AN2_B",["Unarmed",[]],
 	"RHS_MELB_AH6M",["Light",["rhs_mag_M151_7","rhs_mag_m134_pylon_3000","rhs_mag_m134_pylon_3000","rhs_mag_M151_7"],"Medium",["rhsusf_mag_gau19_melb_left","","","rhs_mag_DAGR_8"],"Heavy",["rhsusf_mag_gau19_melb_left","","","rhs_mag_AGM114K_2"]],
-	"I_Heli_Transport_02_F",["Unarmed",[]],
 	"I_Heli_light_03_dynamicLoadout_F",["Anti Tank",["PylonWeapon_300Rnd_20mm_shells","PylonRack_4Rnd_ACE_Hellfire_AGM114K"],"Anti Infantry",["PylonWeapon_300Rnd_20mm_shells","PylonRack_12Rnd_missiles"]],
 	"I_Heli_light_03_unarmed_F",["Unarmed",[]],
 	"RHS_C130J",["Unarmed",[]],
