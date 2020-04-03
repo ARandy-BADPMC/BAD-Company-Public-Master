@@ -9,7 +9,8 @@ waitUntil {
 remoteExec ["CHAB_fnc_zeus_out_server",2];*/
 _done = false;
 
-_group = missionNamespace getVariable "Zeus_group";
+_group = missionNamespace getVariable ["Zeus_group",grpNull];
+if (_group isEqualTo grpNull) exitwith {hint "The server is still initializing. Try again later"};
 
 {
 	if (!alive (getAssignedCuratorUnit _x)) exitWith {

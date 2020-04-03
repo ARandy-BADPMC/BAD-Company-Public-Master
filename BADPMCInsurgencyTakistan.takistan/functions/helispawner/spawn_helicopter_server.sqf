@@ -18,6 +18,7 @@ if (_isAttack == 1) then
 	
 	[_helicopter] call skinapplier;
 	_helicopter setdir (getdir heli_spawnpos);
+	_helicopter enableCopilot false;
 	_pylonPaths = (configProperties [configFile >> "CfgVehicles" >> typeOf _helicopter >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"]) apply {getArray (_x >> "turret")};
 	{ _helicopter removeWeaponGlobal getText (configFile >> "CfgMagazines" >> _x >> "pylonWeapon") } forEach getPylonMagazines _helicopter;
 	{ _helicopter setPylonLoadOut [_forEachIndex + 1, _x, true, _pylonPaths select _forEachIndex] } forEach _pylons;
@@ -35,6 +36,7 @@ if (_isAttack == 1) then
 	_helicopter = _vehicle createVehicle (getpos heli_spawnpos);
 	[_helicopter] call skinapplier;
 	_helicopter setdir (getdir heli_spawnpos);
+	_helicopter enableCopilot false;
 	_helicopter addMPEventHandler ["MPKilled",
 	{
 		_current_helis = missionNamespace getVariable ["MaxTransHelis",1];
