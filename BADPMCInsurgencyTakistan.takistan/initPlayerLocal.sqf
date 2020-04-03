@@ -1,6 +1,7 @@
 waitUntil {!isNull player && player == player};
 ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 
+CHAB_fnc_blockTakeControl = compile preprocessFileLineNumbers "functions\blockTakeControl.sqf";
 
 switch (typeOf player) do { 
 	case "rhsusf_airforce_jetpilot" : {  player call CHAB_fnc_whitelist; }; 
@@ -13,6 +14,8 @@ switch (typeOf player) do {
 		tank_spawner addAction ["<t color='#FF0000'>I want my vehicle removed!</t>","[] spawn CHAB_fnc_remover_tank;",nil, 1, false, true, "", "true", 10, false,""];   
 	}; 
 };
+player addEventHandler ["ControlsShifted",{[(_this select 0), (_this select 1), (_this select 2)] call CHAB_fnc_blockTakeControl}];
+
 _admins = ["76561198117073327","76561198142692277","76561198017258138","76561198002110130","76561197998271838","76561197992821044","76561197988793826","76561198048254349","76561198088658039"]; //76561197998271838-GOMEZ 76561197992821044-GRAND 76561197988793826-WEEDO  76561198117073327-Randy  76561198142692277-Alex.K   76561198017258138 - A.Mitchell 76561198002110130 K.Hunter 76561198088658039 Ayoub
 if(getPlayerUID player in _admins) 
 	then 
